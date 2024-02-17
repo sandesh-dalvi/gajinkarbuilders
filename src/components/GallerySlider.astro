@@ -1,0 +1,74 @@
+---
+
+---
+
+<div class="gallery-slider">
+  <div class="gallery-content">
+    <div>Our</div>
+    <div>Gallery</div>
+    <button>See More</button>
+  </div>
+</div>
+
+<style>
+  .gallery-slider {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    padding: 10px;
+    background-color: #ffffff;
+    background-image: radial-gradient(
+      rgba(77, 118, 175, 0.555),
+      transparent 50%
+    );
+    margin-top: -50px;
+  }
+
+  .gallery-slider .gallery-content {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #000000;
+    width: max-gallery-content;
+  }
+  .gallery-slider .gallery-content div:nth-child(2) {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: bold;
+    position: relative;
+  }
+  .gallery-slider .gallery-content div:nth-child(2)::before {
+    position: absolute;
+    left: 60%;
+    bottom: 50%;
+    width: 80px;
+    height: 80px;
+    gallery-content: "";
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .gallery-slider .gallery-content div:nth-child(1) {
+    text-align: left;
+    text-transform: uppercase;
+    transform: translateY(20px);
+    font-weight: bold;
+  }
+  .gallery-slider .gallery-content button {
+    border: 2px solid rgba(0, 13, 85, 0.8);
+    background: transparent;
+    color: rgb(0, 13, 85);
+    font-family: Poppins;
+    letter-spacing: 5px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+</style>
+
+<script></script>

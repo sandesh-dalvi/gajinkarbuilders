@@ -1,0 +1,195 @@
+---
+import MainLayout from "../../layouts/main-layout.astro";
+
+export function getStaticPaths() {
+  const pages = [
+    {
+      project: "project1",
+      title: "Project 1",
+      addres: "North Goa",
+      map: "",
+      amenities: [
+        { icon: "/images/building.png", amenity: "CCTV" },
+        { icon: "/images/building.png", amenity: "AC" },
+        { icon: "/images/building.png", amenity: "CCTV" },
+        { icon: "/images/building.png", amenity: "AC" },
+      ],
+      images: [
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+      ],
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos asperiores nemo laborum impedit veniam quas eaque dolorum molestias possimus, quae magni! Unde natus quisquam ad sequi deserunt, deleniti sed animi.",
+    },
+    {
+      project: "project2",
+      title: "Project 2",
+      addres: "North Goa",
+      map: "",
+      amenities: [
+        { icon: "/images/building.png", amenity: "CCTV" },
+        { icon: "/images/building.png", amenity: "AC" },
+      ],
+      images: [
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+      ],
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos asperiores nemo laborum impedit veniam quas eaque dolorum molestias possimus, quae magni! Unde natus quisquam ad sequi deserunt, deleniti sed animi.",
+    },
+    {
+      project: "project2",
+      title: "Project 2",
+      addres: "North Goa",
+      map: "",
+      amenities: [
+        { icon: "/images/building.png", amenity: "CCTV" },
+        { icon: "/images/building.png", amenity: "AC" },
+      ],
+      images: [
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+      ],
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos asperiores nemo laborum impedit veniam quas eaque dolorum molestias possimus, quae magni! Unde natus quisquam ad sequi deserunt, deleniti sed animi.",
+    },
+    {
+      project: "project3",
+      title: "Project 3",
+      addres: "North Goa",
+      map: "",
+      amenities: [
+        { icon: "/images/building.png", amenity: "CCTV" },
+        { icon: "/images/building.png", amenity: "AC" },
+      ],
+      images: [
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+      ],
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos asperiores nemo laborum impedit veniam quas eaque dolorum molestias possimus, quae magni! Unde natus quisquam ad sequi deserunt, deleniti sed animi.",
+    },
+    {
+      project: "project4",
+      title: "Project 4",
+      addres: "North Goa",
+      map: "",
+      amenities: [
+        { icon: "/images/building.png", amenity: "CCTV" },
+        { icon: "/images/building.png", amenity: "AC" },
+      ],
+      images: [
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+      ],
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos asperiores nemo laborum impedit veniam quas eaque dolorum molestias possimus, quae magni! Unde natus quisquam ad sequi deserunt, deleniti sed animi.",
+    },
+    {
+      project: "project5",
+      title: "Project 5",
+      addres: "North Goa",
+      map: "",
+      amenities: [
+        { icon: "/images/building.png", amenity: "CCTV" },
+        { icon: "/images/building.png", amenity: "AC" },
+      ],
+      images: [
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+      ],
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos asperiores nemo laborum impedit veniam quas eaque dolorum molestias possimus, quae magni! Unde natus quisquam ad sequi deserunt, deleniti sed animi.",
+    },
+    {
+      project: "project6",
+      title: "Project 6",
+      addres: "North Goa",
+      map: "",
+      amenities: [
+        { icon: "/images/building.png", amenity: "CCTV" },
+        { icon: "/images/building.png", amenity: "AC" },
+      ],
+      images: [
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+        "/images/projects.jpg",
+      ],
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos asperiores nemo laborum impedit veniam quas eaque dolorum molestias possimus, quae magni! Unde natus quisquam ad sequi deserunt, deleniti sed animi.",
+    },
+  ];
+  return pages.map(
+    ({ project, title, amenities, addres, desc, map, images }) => {
+      return {
+        params: { project },
+        props: { title, amenities, addres, desc, map, images },
+      };
+    }
+  );
+}
+
+const { title, amenities, addres, desc, map, images } = Astro.props;
+---
+
+<MainLayout>
+  <section class="relative isolate h-[55vh] contact-hero flex items-center">
+    <div class="absolute inset-0 w-full h-full bg-blue-950 opacity-70 z-0">
+    </div>
+    <div class="absolute top-[40%] left-[5%] z-10">
+      <h2 class="uppercase text-teal-200 pb-3">{addres}</h2>
+      <h1
+        class="font-extralight text-white text-4xl md:text-5xl md:max-w-xl md:leading-[4rem] xl:text-6xl xl:max-w-3xl xl:leading-[5rem]"
+      >
+        {title}
+      </h1>
+    </div>
+  </section>
+
+  <section class="">
+    <div class="py-6">
+      <div
+        class="flex justify-center items-center p-4 md:px-8 lg:px-12 xl:p-16 2xl:px-20"
+      >
+        <p class="xl:max-w-[1100px] font-semibold text-neutral-700">{desc}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-amenities">
+    <div class="py-6">
+      <div class="xl:pb-4">
+        <h2
+          class="text-center font-bold text-white text-3xl md:text-5xl xl:text-6xl"
+        >
+          Amenities
+        </h2>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-center items-center gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 p-4"
+      >
+        {
+          amenities.map((item) => (
+            <div class=" border border-white p-2 md:p-4 shadow-[0px_3px_8px_1px_#ffffff50] rounded-lg flex flex-col gap-2 justify-start items-center transition-all duration-500 bg-[#ffffff17] hover:bg-[#ffffff30] hover:shadow-[0px_0px_6px_2px_#ffffff10]">
+              <div class="max-w-[100px]">
+                <img src={item.icon} alt="" />
+              </div>
+              <div>
+                <h3 class=" text-white font-bold text-xl">{item.amenity}</h3>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .bg-amenities {
+    background-image: radial-gradient(
+      circle farthest-corner at 10% 20%,
+      rgba(100, 43, 115, 1) 0%,
+      rgba(4, 0, 4, 1) 90%
+    );
+  }
+</style>

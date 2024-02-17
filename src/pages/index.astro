@@ -1,16 +1,462 @@
 ---
+import MainLayout from "../layouts/main-layout.astro";
 
+import HeroSlider from "../components/HeroSlider.astro";
+import GallerySlider from "../components/GallerySlider.astro";
+import MapSection from "../components/MapSection.astro";
+import AboutSection from "../components/AboutSection.astro";
+import { Image } from "astro:assets";
+
+import building from "../assets/images/building.png";
+import projects1 from "../assets/images/projects.jpg";
+import aboutsection from "../assets/images/aboutsection.png";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Gajinkar Builders">
+  <HeroSlider />
+
+  <section class="about-section">
+    <AboutSection />
+  </section>
+
+  <section
+    class="amenities mt-4 lg:mt-6 p-4 sm:px-6 md:px-16 lg:px-20 xl:px-24 2xl:px-32"
+  >
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="md:col-span-2">
+        <div>
+          <h2
+            class="text-4xl lg:text-5xl 2xl:text-6xl font-extrabold mt-1 leading-[1.2] text-black"
+          >
+            Amenities We Offer
+            <b class="font-medium italic text-blue-700">
+              Gajinkar Builders Special!
+            </b>
+          </h2>
+        </div>
+      </div>
+
+      <div class="shadow-lg rounded-md">
+        <div
+          class="p-4 flex flex-col justify-center items-center slide_diagonal"
+        >
+          <h3 class="text-2xl">Comfortable Flat</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Facere,pariatur?
+          </p>
+          <Image src={building} class="w-12 h-12 self-end" alt="" />
+        </div>
+      </div>
+
+      <div class="shadow-lg rounded-md">
+        <div
+          class="p-4 flex flex-col justify-center items-center slide_diagonal-reverse"
+        >
+          <h3 class="text-2xl">Comfortable Flat</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+            pariatur?
+          </p>
+          <Image src={building} class="w-12 h-12 self-end" alt="" />
+        </div>
+      </div>
+
+      <div class="shadow-lg rounded-md">
+        <div
+          class="p-4 flex flex-col justify-center items-center slide_diagonal"
+        >
+          <h3 class="text-2xl">Comfortable Flat</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+            pariatur?
+          </p>
+          <Image src={building} class="w-12 h-12 self-end" alt="" />
+        </div>
+      </div>
+
+      <div class="shadow-lg rounded-md">
+        <div
+          class="p-4 flex flex-col justify-center items-center slide_diagonal-reverse"
+        >
+          <h3 class="text-2xl">Comfortable Flat</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+            pariatur?
+          </p>
+          <Image src={building} class="w-12 h-12 self-end" alt="" />
+        </div>
+      </div>
+
+      <div class="shadow-lg rounded-md">
+        <div
+          class="p-4 flex flex-col justify-center items-center slide_diagonal"
+        >
+          <h3 class="text-2xl">Comfortable Flat</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+            pariatur?
+          </p>
+          <Image src={building} class="w-12 h-12 self-end" alt="" />
+        </div>
+      </div>
+
+      <div class="shadow-lg rounded-md">
+        <div
+          class="p-4 flex flex-col justify-center items-center slide_diagonal-reverse"
+        >
+          <h3 class="text-2xl">Comfortable Flat</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+            pariatur?
+          </p>
+          <Image src={building} class="w-12 h-12 self-end" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section rounded-b-3xl mt-3 mb-3">
+    <div class="py-4 pb-6">
+      <h2
+        class="text-primary font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center pb-4 lg:py-6 text-white"
+      >
+        Our Projects
+      </h2>
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-6 px-4"
+      >
+        <div class="flex flex-col justify-center items-center lg:max-w-lg">
+          <div>
+            <Image src={projects1} alt="" />
+          </div>
+          <div class="w-[90%] bg-white p-4 shadow-2xl -mt-10">
+            <h3 class="text-center font-bold text-primary text-2xl lg:text-3xl">
+              On-going Projects
+            </h3>
+            <p class="text-sm xl:text-base font-medium text-neutral-500 mt-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              voluptatem maiores, veritatis inventore harum voluptatum quis
+              delectus hic nihil expedita!
+            </p>
+            <div class="mt-4 py-2">
+              <a
+                href="/about"
+                class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 rounded-[2rem] w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105"
+              >
+                Know More
+                <span
+                  class="w-2 h-2 rounded-full shadow bg-transparent m-2 border"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-center lg:max-w-lg">
+          <div>
+            <Image src={projects1} alt="" />
+          </div>
+          <div class="w-[90%] bg-white p-4 shadow-2xl -mt-10">
+            <h3 class="text-center font-bold text-primary text-2xl">
+              Completed projects
+            </h3>
+            <p class="text-sm xl:text-base font-medium text-neutral-500 mt-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              voluptatem maiores, veritatis inventore harum voluptatum quis
+              delectus hic nihil expedita!
+            </p>
+            <div class="mt-4 py-2">
+              <a
+                href="/about"
+                class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 rounded-[2rem] w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105"
+              >
+                Know More
+                <span
+                  class="w-2 h-2 rounded-full shadow bg-transparent m-2 border"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section pt-4 lg:mt-6 2xl:mt-8">
+    <div class="py-6">
+      <GallerySlider />
+    </div>
+  </section>
+
+  <section
+    class="services-section rounded-t-3xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900"
+  >
+    <div class="py-6">
+      <h2
+        class="text-primary font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center py-6 text-white"
+      >
+        Services We Provide
+      </h2>
+      <div
+        class="flex flex-col p-4 md:p-8 lg:px-12 xl:px-16 2xl:px-20 md:flex-row gap-6 lg:gap-8 justify-center items-center"
+      >
+        <div class="shadow-lg rounded-md max-w-md">
+          <div
+            class="p-4 pt-6 flex flex-col justify-center items-center slide_diagonal-reverse"
+          >
+            <Image src={building} class="w-12 h-12" alt="" />
+            <h3 class="text-2xl md:text-xl lg:text-2xl py-2 text-center">
+              Property Management
+            </h3>
+            <p class="text-center pb-2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+              pariatur?
+            </p>
+            <a href="#" class="flex gap-2 text-amber-600">
+              Learn More
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="shadow-lg rounded-md max-w-md">
+          <div
+            class="p-4 pt-6 flex flex-col justify-center items-center slide_diagonal"
+          >
+            <Image src={building} class="w-12 h-12" alt="" />
+            <h3 class="text-2xl md:text-xl lg:text-2xl py-2 text-center">
+              Comfortable Flat
+            </h3>
+            <p class="text-center pb-2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+              pariatur?
+            </p>
+            <a href="#" class="flex gap-2 text-amber-600"
+              >Learn More
+              <span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="shadow-lg rounded-md max-w-md">
+          <div
+            class="p-4 pt-6 flex flex-col justify-center items-center slide_diagonal-reverse"
+          >
+            <Image src={building} class="w-12 h-12" alt="" />
+            <h3 class="text-2xl md:text-xl lg:text-2xl py-2 text-center">
+              Comfortable Flat
+            </h3>
+            <p class="text-center pb-2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+              pariatur?
+            </p>
+            <a href="#" class="flex gap-2 text-amber-600"
+              >Learn More
+              <span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div
+      class="flex flex-col-reverse lg:flex-row justify-center items-center gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12"
+    >
+      <div>
+        <h2
+          class="text-primary font-extrabold text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center py-4 lg:py-6"
+        >
+          Frequently Asked Questions
+        </h2>
+        <div class="p-4">
+          <div class="accordion-wrapper">
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check1" checked />
+              <label class="accordion-label" for="check1">Accordion 1</label>
+              <div class="accordion-content">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Aliquid, accusamus? &#128522;
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check2" />
+              <label class="accordion-label" for="check2">Accordion 2</label>
+              <div class="accordion-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestiae facere ut libero soluta reiciendis asperiores?
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check3" />
+              <label class="accordion-label" for="check3">Accordion 3</label>
+              <div class="accordion-content">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
+                  obcaecati assumenda dicta facere nemo ullam officia aut ut
+                  voluptates. Illo laudantium esse alias laboriosam obcaecati
+                  eaque tenetur repellendus deleniti omnis!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full lg:w-auto lg:justify-self-end">
+        <Image
+          src={aboutsection}
+          alt=""
+          class="h-[30vh] lg:h-auto w-full lg:w-auto object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <MapSection />
+</MainLayout>
+<style>
+  .projects-section {
+    background-image: linear-gradient(
+      111.4deg,
+      rgba(7, 7, 9, 1) 6.5%,
+      rgba(27, 24, 113, 1) 93.2%
+    );
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    /* background-color: #8ec5fc; */
+    /* background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%); */
+  }
+  .accordion-wrapper {
+    /* border-radius: 8px; */
+    overflow: hidden;
+    /* box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5); */
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .accordion {
+    width: 100%;
+    color: #0027a8;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .accordion-wrapper .accordion input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  .accordion:last-child {
+    margin-bottom: 0;
+  }
+  .accordion-label {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 16px;
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(254, 253, 205, 1) 11.2%,
+      rgba(163, 230, 255, 1) 91.1%
+    );
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .accordion-label:hover {
+    background: #0027a8;
+    color: #f5fbff;
+  }
+  .accordion-label::after {
+    content: "\276F";
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .accordion-content {
+    max-height: 0;
+    padding: 0 16px;
+    color: #000;
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(254, 253, 205, 1) 11.2%,
+      rgba(163, 230, 255, 1) 91.1%
+    );
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .accordion-content p {
+    margin: 0;
+    color: #000;
+    font-size: 14px;
+  }
+  .accordion-wrapper .accordion input:checked + .accordion-label {
+    background: white;
+    color: #0027a8;
+    border: 2px solid #0027a8;
+  }
+  .accordion-wrapper .accordion input:checked + .accordion-label::after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .accordion-wrapper .accordion input:checked ~ .accordion-content {
+    max-height: 100vh;
+    padding: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .accordion-label {
+      font-size: 20px;
+    }
+    .accordion-content p {
+      font-size: 18px;
+    }
+  }
+</style>

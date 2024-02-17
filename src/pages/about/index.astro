@@ -1,0 +1,214 @@
+---
+import AboutSection from "../../components/AboutSection.astro";
+import MapSection from "../../components/MapSection.astro";
+import MainLayout from "../../layouts/main-layout.astro";
+---
+
+<MainLayout title="Gajinkar Builders">
+  <section class="relative isolate h-[55vh] about-hero flex items-center">
+    <div class="absolute inset-0 w-full h-full bg-blue-950 opacity-70 z-0">
+    </div>
+    <div class="absolute top-[40%] left-[5%] z-10">
+      <h2 class="uppercase text-teal-200 pb-3">About Us</h2>
+      <h1
+        class="font-extralight text-white text-4xl md:text-5xl md:max-w-xl md:leading-[4rem] xl:text-6xl xl:max-w-3xl xl:leading-[5rem]"
+      >
+        We Have A Goal To Achieve You To Your Destination
+      </h1>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="pt-10">
+      <AboutSection />
+    </div>
+  </section>
+
+  <section class="mission-vision-section">
+    <div class="p-4 py-4 flex justify-center items-center">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 justify-center items-center lg:max-w-5xl xl:max-w-6xl 2xl:max-w-[1400px]"
+      >
+        <div class="md:px-2">
+          <h2 class="uppercase text-sm text-indigo-900 font-medium">
+            Our Mission & Vision
+          </h2>
+          <div class="py-1">
+            <h3
+              class="font-medium text-3xl md:text-4xl pb-3 md:pt-2 md:pb-4 xl:text-5xl"
+            >
+              Working For You
+            </h3>
+            <p class="text-neutral-500 font-normal xl:text-base">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              doloremque harum, minima saepe quam ipsum nostrum laborum
+              asperiores numquam quod.
+            </p>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row justify-center items-center py-3"
+          >
+            <div>
+              <h3 class="font-medium text-2xl md:text-3xl pb-2 xl:text-4xl">
+                Our Strategy
+              </h3>
+              <p class="text-neutral-500 font-normal xl:text-base">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. At,
+                inventore.
+              </p>
+            </div>
+            <div>
+              <h3
+                class="font-medium text-2xl md:text-3xl py-2 md:pt-2 xl:text-4xl"
+              >
+                Our Mission
+              </h3>
+              <p class="text-neutral-500 font-normal xl:text-base">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. At,
+                inventore.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="/images/aboutsection.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-goals rounded-t-3xl">
+    <div class="flex justify-center items-center">
+      <div
+        class="p-4 py-6 flex flex-col gap-2 lg:flex-row-reverse lg:gap-8 2xl:gap-12 justify-center items-center xl:max-w-7xl 2xl:max-w-[1400px]"
+      >
+        <div class="flex justify-center items-center">
+          <div class="">
+            <h3 class="uppercase text-sm text-indigo-500 font-medium">
+              Delivering Innovaion
+            </h3>
+            <h2
+              class="text-primary font-bold text-3xl py-2 lg:text-4xl 2xl:text-5xl text-white"
+            >
+              Sustainability Property
+              <span class="text-indigo-700">Goals As Expected</span>
+            </h2>
+            <p class="text-neutral-200 pb-2 2xl:text-base">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus, tempora voluptate eum harum unde natus, possimus
+              dignissimos sapiente tenetur repellendus voluptas omnis iure,
+              deleniti expedita!
+            </p>
+            <div class="py-4">
+              <a
+                href="../about/"
+                class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 rounded-[2rem] w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105"
+                >View Details</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <div
+            class="my-2 about-bg1 p-4 grid place-content-center h-[40vh] md:h-[700px] md:w-[700px] lg:h-[500px] lg:w-[500px]"
+          >
+            <div
+              class="bg-white p-2 overflow-hidden md:p-6 md:py-8 md:h-[500px] md:w-[500px] lg:h-[300px] lg:w-[300px] rounded-full flex justify-center items-center"
+            >
+              <div class="owl-carousel owl-theme md:max-w-md">
+                <div class="item">
+                  <div class="flex flex-col justify-center items-center gap-2">
+                    <img src="" alt="" class="w-[50px] h-[50px]" />
+                    <h2 class="text-center text-primary font-semibold">
+                      Quality Managemnet
+                    </h2>
+                    <p class="text-center text-neutral-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quis est laudantium voluptas obcaecati quos animi.
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="flex flex-col justify-center items-center gap-2">
+                    <img src="" alt="" class="w-[50px] h-[50px]" />
+                    <h2 class="text-center text-primary font-semibold">
+                      Quality Managemnet
+                    </h2>
+                    <p class="text-center text-neutral-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quis est laudantium voluptas obcaecati quos animi.
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="flex flex-col justify-center items-center gap-2">
+                    <img src="" alt="" class="w-[50px] h-[50px]" />
+                    <h2 class="text-center text-primary font-semibold">
+                      Quality Managemnet
+                    </h2>
+                    <p class="text-center text-neutral-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quis est laudantium voluptas obcaecati quos animi.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <MapSection />
+</MainLayout>
+
+<style>
+  .about-hero {
+    background-image: url("/images/abouthero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .about-bg1 {
+    background-image: url("/images/projects.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .about-goals {
+    background-image: linear-gradient(
+      111.4deg,
+      rgba(7, 7, 9, 1) 6.5%,
+      rgba(27, 24, 113, 1) 93.2%
+    );
+  }
+</style>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"></script>
+<script is:inline>
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      },
+    },
+  });
+</script>

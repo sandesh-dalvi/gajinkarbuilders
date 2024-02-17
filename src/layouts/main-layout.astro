@@ -1,0 +1,89 @@
+---
+import Header from "../components/Header";
+import Footer from "../components/Footer.astro";
+const {
+  title,
+  description = "Gajinkar Builders",
+  image = "/images/logo.png",
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta property="og:image" content={image} />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>{title}</title>
+    <style is:global>
+      body {
+        box-sizing: border-box;
+        overflow-x: hidden !important;
+      }
+      .slide_diagonal,
+      .slide_diagonal-reverse {
+        border-radius: 0.5rem;
+        -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s;
+      }
+
+      .slide_diagonal {
+        color: #fff;
+        background-color: #ff3cac;
+        background-image: linear-gradient(
+          225deg,
+          #ff3cac 0%,
+          #784ba0 50%,
+          #2b86c5 100%
+        );
+        border: 2px solid #0027a8;
+        box-shadow: inset 0 0 0 0 #0027a8;
+      }
+      .slide_diagonal-reverse {
+        color: #0027a8;
+        background-color: #fff;
+        border: 2px solid #fff;
+        box-shadow: inset 0 0 0 0 #fff;
+      }
+      .slide_diagonal:hover {
+        box-shadow: inset 500px 150px 0 0 #fff;
+        color: #0027a8;
+      }
+
+      .slide_diagonal-reverse:hover {
+        box-shadow: inset 500px 150px 0 0 #0027a8;
+        color: #fff;
+      }
+      .contact-hero {
+        background-image: url("/images/abouthero.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <main>
+      <Header client:load />
+      <slot />
+      <Footer />
+    </main>
+  </body>
+</html>

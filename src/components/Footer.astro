@@ -1,0 +1,125 @@
+---
+import { Image } from "astro:assets";
+
+import logo from "../assets/images/logo.png";
+---
+
+<footer class="primary-footer">
+  <div class="p-4 py-6 flex justify-center">
+    <div class="max-w-[1400px]">
+      <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+        <div class="flex flex-col gap-2 justify-center items-center">
+          <Image src={logo} class="max-w-[200px]" alt="" />
+          <p class="max-w-sm text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
+            exercitationem!
+          </p>
+          <ul class="flex gap-2 justify-center items-center">
+            <li>
+              <a href="/">
+                <i
+                  class="fa-brands fa-square-facebook text-blue-600 text-4xl transition-all duration-700 hover:text-primary"
+                ></i></a
+              >
+            </li>
+            <li>
+              <a href="/"
+                ><i
+                  class="fa-brands fa-square-x-twitter text-blue-600 text-4xl transition-all duration-700 hover:text-primary"
+                ></i></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="fa-brands fa-square-instagram text-blue-600 text-4xl transition-all duration-700 hover:text-primary"
+                ></i></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="fa-brands fa-square-pinterest text-blue-600 text-4xl transition-all duration-700 hover:text-primary"
+                ></i></a
+              >
+            </li>
+            <li>
+              <a href="/"
+                ><i
+                  class="fa-brands fa-square-youtube transition-all duration-700 text-blue-600 text-4xl hover:text-primary"
+                ></i></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-2 items-center">
+          <h3 class="font-bold text-lg">Important Link</h3>
+          <ul class="text-primary text-base flex flex-col gap-2 font-medium">
+            <li>
+              <a href="/contact" class="flex gap-2 items-center"
+                ><i class="fa-solid fa-hand-point-right"></i>
+                <span>Contact Us</span></a
+              >
+            </li>
+            <li>
+              <a href="/completed-projects" class="flex gap-2 items-center"
+                ><i class="fa-solid fa-hand-point-right"></i>
+                <span>Completed Projects</span></a
+              >
+            </li>
+            <li>
+              <a href="/ongoing-projects" class="flex gap-2 items-center"
+                ><i class="fa-solid fa-hand-point-right"></i>
+                <span>On Going Projects</span></a
+              >
+            </li>
+
+            <li>
+              <a href="/terms-and-conditions" class="flex gap-2 items-center"
+                ><i class="fa-solid fa-hand-point-right"></i>
+                <span>Terms & Conditions</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-2 items-center">
+          <h3 class="font-bold text-lg">Resources</h3>
+          <ul class="text-primary text-base flex flex-col gap-2 font-medium">
+            <li>
+              <a href="/services" class="flex gap-2 items-center"
+                ><i class="fa-solid fa-hand-point-right"></i>
+                <span>Services</span></a
+              >
+            </li>
+            <li>
+              <a href="/amenities" class="flex gap-2 items-center"
+                ><i class="fa-solid fa-hand-point-right"></i>
+                <span>Amenities</span></a
+              >
+            </li>
+            <li>
+              <a href="/gallery" class="flex gap-2 items-center"
+                ><i class="fa-solid fa-hand-point-right"></i>
+                <span>Gallery</span></a
+              >
+            </li>
+            <li>
+              <a href="/faqs" class="flex gap-2 items-center"
+                ><i class="fa-solid fa-hand-point-right"></i>
+                <span>FAQs</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-primary text-white font-medium p-4 text-center">
+    <span
+      >Copyright © 2023 Gajinkar Builders. All Rights Reserved by Samrdh Design
+      Studio & Branding</span
+    >
+  </div>
+</footer>
+
+<style></style>
