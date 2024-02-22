@@ -1,0 +1,133 @@
+---
+import MainLayout from "../../layouts/main-layout.astro";
+---
+
+<MainLayout>
+  <section class="services-heading h-[60vh]">
+    <div class="p-4 py-10 lg:py-14 xl:py-16 2xl:py-20">
+      <div
+        class="flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-3 xl:gap-4"
+      >
+        <h1
+          class="text-center font-bold pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+        >
+          See Luxury in Every Detail
+        </h1>
+        <h2 class="text-center font-medium text-neutral-800 md:max-w-[600px]">
+          Explore captivating photos and immersive videos to experience the
+          luxury woven into every corner
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="sections">
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+  </section>
+
+  <section class="h-[50vh]"></section>
+</MainLayout>
+<style>
+  .sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .gallery {
+    height: 200vh;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: auto;
+    z-index: -1;
+  }
+  .img:nth-of-type(1) {
+    background-image: url("../../assets/images/img11.jpg");
+  }
+  .img:nth-of-type(2) {
+    background-image: url("../../assets/images/img2.jpg");
+  }
+  .img:nth-of-type(3) {
+    background-image: url("../../assets/images/img3.jpg");
+  }
+  .img:nth-of-type(4) {
+    background-image: url("../../assets/images/img1.png");
+  }
+  .img:nth-of-type(5) {
+    background-image: url("../../assets/images/img33.jpg");
+  }
+  .img:nth-of-type(6) {
+    background-image: url("../../assets/images/img22.jpg");
+  }
+  .img:nth-of-type(7) {
+    background-image: url("../../assets/images/img11.jpg");
+  }
+  .img:nth-of-type(8) {
+    background-image: url("../../assets/images/img4.jpg");
+  }
+  .img:nth-of-type(9) {
+    background-image: url("../../assets/images/img1.png");
+  }
+  .img::before {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    border-right: 1px solid black;
+  }
+</style>
+
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"
+></script>
+<script
+  is:inline
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script
+  is:inline
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+></script>
+<script is:inline>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+  const tl = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".img",
+        scrub: true,
+      },
+    })
+    .to(".img", {
+      stagger: 0.1,
+      y: -200,
+      scrub: true,
+    });
+</script>

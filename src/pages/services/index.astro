@@ -25,8 +25,8 @@ import aboutsection from "../../assets/images/aboutsection.png";
     </div>
   </section> -->
 
-  <section class="">
-    <div class="p-4 py-6">
+  <section class="services-heading">
+    <div class="p-4 py-10 lg:py-14 xl:py-16 2xl:py-20">
       <div
         class="flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-3 xl:gap-4"
       >
@@ -45,16 +45,26 @@ import aboutsection from "../../assets/images/aboutsection.png";
     </div>
   </section>
 
-  <section>
-    <div class="p-4 py-6 rounded-t-xl">
-      <h2 class="text-center font-bold pb-2 text-2xl">Construction Services</h2>
-      <div class="grid grid-cols-1 lg:grid-cols-2 justify-center items-center">
+  <section class="bg-indigo-50">
+    <div
+      class="p-4 py-9 lg:p-6 xl:p-8 2xl:p-10 lg:py-14 xl:py-16 rounded-b-3xl bg-gradient-to-r from-emerald-50 to-teal-100 shadow-lg"
+    >
+      <h2
+        class="text-center font-bold pb-4 text-3xl md:text-4xl lg:pb-10 xl:pb-14 xl:text-5xl"
+      >
+        Construction Services
+      </h2>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 justify-center items-center lg:gap-6 xl:gap-8"
+      >
         <div>
-          <h3>
+          <h3
+            class="p-2 text-lg font-semibold md:text-xl lg:text-2xl xl:text-3xl"
+          >
             Building Dreams, Transforming Spaces - Your Trusted Partner in
             Construction Excellence
           </h3>
-          <p>
+          <p class="p-2 font-medium text-neutral-800 xl:text-lg">
             At the heart of our Construction Services is a commitment to
             building dreams and transforming spaces. As your trusted partner in
             construction excellence, we bring vision to life, ensuring every
@@ -64,7 +74,7 @@ import aboutsection from "../../assets/images/aboutsection.png";
             brilliance.
           </p>
         </div>
-        <div>
+        <div class="flex justify-center items-center">
           <Image
             src={aboutsection}
             alt=""
@@ -73,12 +83,29 @@ import aboutsection from "../../assets/images/aboutsection.png";
         </div>
       </div>
     </div>
-    <div class="p-4 py-6 rounded-t-xl">
-      <h2 class="text-center font-bold pb-2 text-2xl">Rebuilding Services</h2>
-      <div class="grid grid-cols-1 lg:grid-cols-2 justify-center items-center">
+    <div class="p-4 py-9 lg:p-6 xl:p-8 2xl:p-10 lg:py-14 xl:py-16">
+      <h2
+        class="text-center font-bold pb-4 text-3xl md:text-4xl lg:pb-10 xl:pb-14 xl:text-5xl"
+      >
+        Rebuilding Services
+      </h2>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 justify-center items-center lg:gap-6 xl:gap-8"
+      >
+        <div class="hidden lg:flex justify-center items-center">
+          <Image
+            src={aboutsection}
+            alt=""
+            class="rounded-xl shadow-lg object-cover"
+          />
+        </div>
         <div>
-          <h3>Revitalizing Structures, Renewing Possibilities</h3>
-          <p>
+          <h3
+            class="p-2 text-lg font-semibold md:text-xl lg:text-2xl xl:text-3xl"
+          >
+            Revitalizing Structures, Renewing Possibilities
+          </h3>
+          <p class="p-2 font-medium text-neutral-800 xl:text-lg">
             Experience a transformation with our Rebuilding Services, where we
             specialize in revitalizing structures and renewing possibilities.
             Whether it's restoring the past or creating a new vision, our expert
@@ -87,14 +114,33 @@ import aboutsection from "../../assets/images/aboutsection.png";
             turning dreams into reality.
           </p>
         </div>
+        <div class="flex justify-center items-center lg:hidden">
+          <Image
+            src={aboutsection}
+            alt=""
+            class="rounded-xl shadow-lg object-cover"
+          />
+        </div>
       </div>
     </div>
-    <div class="p-4 py-6 rounded-t-xl">
-      <h2 class="text-center font-bold pb-2 text-2xl">Reselling Services</h2>
-      <div class="grid grid-cols-1 lg:grid-cols-2 justify-center items-center">
+    <div
+      class="p-4 py-9 lg:p-6 xl:p-8 2xl:p-10 lg:py-14 xl:py-16 rounded-t-3xl bg-gradient-to-r from-emerald-50 to-teal-100 shadow-lg"
+    >
+      <h2
+        class="text-center font-bold pb-4 text-3xl md:text-4xl lg:pb-10 xl:pb-14 xl:text-5xl"
+      >
+        Reselling Services
+      </h2>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 justify-center items-center lg:gap-6 xl:gap-8"
+      >
         <div>
-          <h3>Unlocking Value, Maximizing Returns</h3>
-          <p>
+          <h3
+            class="p-2 text-lg font-semibold md:text-xl lg:text-2xl xl:text-3xl"
+          >
+            Unlocking Value, Maximizing Returns
+          </h3>
+          <p class="p-2 font-medium text-neutral-800 xl:text-lg">
             Embark on a journey with our Reselling Services, where the focus is
             on unlocking hidden value and maximizing returns. Our strategic
             approach and market expertise ensure a seamless process, guiding you
@@ -103,7 +149,7 @@ import aboutsection from "../../assets/images/aboutsection.png";
             lucrative assets in the market.
           </p>
         </div>
-        <div>
+        <div class="flex justify-center items-center">
           <Image
             src={aboutsection}
             alt=""
@@ -114,3 +160,5 @@ import aboutsection from "../../assets/images/aboutsection.png";
     </div>
   </section>
 </MainLayout>
+
+<style></style>

@@ -1,143 +1,317 @@
 ---
 import MainLayout from "../../layouts/main-layout.astro";
+
+import { Image } from "astro:assets";
+
+import img1 from "../../assets/images/img1.png";
+import img2 from "../../assets/images/img2.jpg";
+import img3 from "../../assets/images/img3.jpg";
+import img4 from "../../assets/images/img4.jpg";
 ---
 
 <MainLayout>
-  <section class="relative isolate h-[55vh] contact-hero flex items-center">
-    <div class="absolute inset-0 w-full h-full bg-blue-950 opacity-70 z-0">
-    </div>
-    <div class="absolute top-[40%] left-[5%] z-10">
-      <h2 class="uppercase text-teal-200 pb-3">
-        Our Completed completed-projects/Projects
-      </h2>
-      <h1
-        class="font-extralight text-white text-4xl md:text-5xl md:max-w-xl md:leading-[4rem] xl:text-6xl xl:max-w-3xl xl:leading-[5rem]"
-      >
-        We're Always Helpful To Lend A Hand
-      </h1>
-    </div>
-  </section>
-
-  <section class="p-4 py-6 md:p-6 md:py-8 flex justify-center items-center">
-    <div class="md:max-w-4xl lg:max-w-7xl 2xl:max-w-[1450px]">
+  <section class="projects-heading">
+    <div class="p-4 py-10 lg:py-14 xl:py-16 2xl:py-20">
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12"
+        class="flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-3 xl:gap-4"
       >
-        <div
-          class="relative isolate flex overflow-hidden rounded-2xl shadow-2xl"
+        <h1
+          class="text-center font-bold pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
         >
-          <a href="completed-projects/project1" class="w-full h-full">
-            <img
-              src="/images/apartment-bg.jpg"
-              class="object-cover w-full h-full"
-              alt=""
-            />
-            <div
-              class="absolute inset-0 w-full h-full z-20 flex flex-col justify-end items-start p-2 bg-[#00000031]"
-            >
-              <div class="text-white font-bold text-lg">
-                completed-projects/Project Name
-              </div>
-              <div class="text-white font-bold text-lg">Location</div>
-            </div>
-          </a>
-        </div>
-        <div
-          class="relative isolate flex overflow-hidden rounded-2xl shadow-2xl"
-        >
-          <a href="completed-projects/project2" class="w-full h-full">
-            <img
-              src="/images/apartment-bg.jpg"
-              class="object-cover w-full h-full"
-              alt=""
-            />
-            <div
-              class="absolute inset-0 w-full h-full z-20 flex flex-col justify-end items-start p-2 bg-[#00000031]"
-            >
-              <div class="text-white font-bold text-lg">
-                completed-projects/Project Name
-              </div>
-              <div class="text-white font-bold text-lg">Location</div>
-            </div>
-          </a>
-        </div>
-        <div
-          class="relative isolate flex overflow-hidden rounded-2xl shadow-2xl"
-        >
-          <a href="completed-projects/project3" class="w-full h-full">
-            <img
-              src="/images/apartment-bg.jpg"
-              class="object-cover w-full h-full"
-              alt=""
-            />
-            <div
-              class="absolute inset-0 w-full h-full z-20 flex flex-col justify-end items-start p-2 bg-[#00000031]"
-            >
-              <div class="text-white font-bold text-lg">
-                completed-projects/Project Name
-              </div>
-              <div class="text-white font-bold text-lg">Location</div>
-            </div>
-          </a>
-        </div>
-        <div
-          class="relative isolate flex overflow-hidden rounded-2xl shadow-2xl"
-        >
-          <a href="completed-projects/project4" class="w-full h-full">
-            <img
-              src="/images/apartment-bg.jpg"
-              class="object-cover w-full h-full"
-              alt=""
-            />
-            <div
-              class="absolute inset-0 w-full h-full z-20 flex flex-col justify-end items-start p-2 bg-[#00000031]"
-            >
-              <div class="text-white font-bold text-lg">
-                completed-projects/Project Name
-              </div>
-              <div class="text-white font-bold text-lg">Location</div>
-            </div>
-          </a>
-        </div>
-        <div
-          class="relative isolate flex overflow-hidden rounded-2xl shadow-2xl"
-        >
-          <a href="completed-projects/project5" class="w-full h-full">
-            <img
-              src="/images/apartment-bg.jpg"
-              class="object-cover w-full h-full"
-              alt=""
-            />
-            <div
-              class="absolute inset-0 w-full h-full z-20 flex flex-col justify-end items-start p-2 bg-[#00000031]"
-            >
-              <div class="text-white font-bold text-lg">
-                completed-projects/Project Name
-              </div>
-              <div class="text-white font-bold text-lg">Location</div>
-            </div>
-          </a>
-        </div>
-        <div
-          class="relative isolate flex overflow-hidden rounded-2xl shadow-2xl"
-        >
-          <a href="completed-projects/project6" class="w-full h-full">
-            <img
-              src="/images/apartment-bg.jpg"
-              class="object-cover w-full h-full"
-              alt=""
-            />
-            <div
-              class="absolute inset-0 w-full h-full z-20 flex flex-col justify-end items-start p-2 bg-[#00000031]"
-            >
-              <div class="text-white font-bold text-lg">
-                completed-projects/Project Name
-              </div>
-              <div class="text-white font-bold text-lg">Location</div>
-            </div>
-          </a>
-        </div>
+          Journey Through Our Completed Masterpieces
+        </h1>
+        <h2 class="text-center font-medium text-neutral-800 md:max-w-[600px]">
+          Explore the Excellence of Our Completed Projects
+        </h2>
       </div>
     </div>
   </section>
+
+  <section class="lg:hidden">
+    <div class="p-4 py-6">
+      <div>
+        <h2 class="text-center font-bold text-2xl">Stonecast Harmony</h2>
+        <h3 class="text-lg text-center">Alto-Betim Porvorim Bardez Goa</h3>
+      </div>
+
+      <div>
+        <div>
+          <div></div>
+          <div>6 2BHK Flats</div>
+        </div>
+
+        <div>
+          <div></div>
+          <div>1 Penthouse</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3">
+        <div>
+          <img src="" alt="" />
+          <h3>Stilt Parking</h3>
+        </div>
+        <div>
+          <img src="" alt="" />
+          <h3>Stilt Parking</h3>
+        </div>
+        <div>
+          <img src="" alt="" />
+          <h3>Stilt Parking</h3>
+        </div>
+        <div>
+          <img src="" alt="" />
+          <h3>Stilt Parking</h3>
+        </div>
+      </div>
+      <div>
+        <img src="" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="hidden lg:block">
+    <div class="wrapp">
+      <div class="spacer"></div>
+
+      <div class="work">
+        <div class="work__left">
+          <div class="work__text">
+            <div class="work__info">
+              <div class="work__left-bl">
+                <span class="work__num">01</span>
+                <h2 class="title">
+                  Aura Sky Apartments <span class="stroke">on gsap</span>
+                </h2>
+                <a href="" class="work__link">view more</a>
+              </div>
+            </div>
+
+            <div class="work__info">
+              <div class="work__left-bl">
+                <span class="work__num">02</span>
+                <h2 class="title">
+                  image animated <span class="stroke">on gsap</span>
+                </h2>
+                <a href="" class="work__link">view more</a>
+              </div>
+            </div>
+
+            <div class="work__info">
+              <div class="work__left-bl">
+                <span class="work__num">03</span>
+                <h2 class="title">
+                  Stonecast Harmony <span class="stroke">on gsap</span>
+                </h2>
+                <a href="" class="work__link">view more</a>
+              </div>
+            </div>
+
+            <div class="work__info">
+              <div class="work__left-bl">
+                <span class="work__num">04</span>
+                <h2 class="title">
+                  Gajinkar Bridge View Apartment <span class="stroke"
+                    >on gsap</span
+                  >
+                </h2>
+                <a href="" class="work__link">view more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="work__right">
+          <div class="work__right-bl">
+            <div class="work__photo">
+              <div class="work__photo-item" title="1">
+                <Image src={img1} alt="" />
+              </div>
+              <div class="work__photo-item" title="2">
+                <Image src={img2} alt="" />
+              </div>
+              <div class="work__photo-item" title="3">
+                <Image src={img3} alt="" />
+              </div>
+              <div class="work__photo-item" title="4">
+                <Image src={img4} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+  </section>
 </MainLayout>
+
+<style>
+  .wrapp {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+    z-index: 1;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+  }
+
+  .spacer {
+    width: 100%;
+    height: 50vh;
+    /* background: #ddd; */
+  }
+
+  .work {
+    display: flex;
+  }
+
+  .work__left {
+    position: relative;
+    width: 54%;
+    z-index: 2;
+  }
+
+  .work__text {
+    margin: auto;
+    width: 80%;
+  }
+
+  .work__info {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .work__num {
+    display: block;
+    line-height: 0.9;
+    text-align: right;
+    font-size: 18px;
+    transform: skewX(-20deg);
+    color: white;
+  }
+
+  .title {
+    text-align: right;
+    font-size: 70px;
+    text-transform: uppercase;
+    color: red;
+  }
+
+  .title .stroke {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px red;
+  }
+
+  .work__link {
+    display: block;
+    width: 365px;
+    margin-top: 50px;
+    margin-left: auto;
+    padding: 18px 0;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: red;
+    letter-spacing: 4px;
+    border: 2px solid white;
+    border-radius: 30px;
+    transition: 0.4s;
+  }
+
+  .work__link:hover {
+    background: white;
+    color: black;
+    letter-spacing: 6px;
+  }
+
+  .work__right {
+    width: 46%;
+    height: auto;
+  }
+
+  .work__right-bl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  }
+
+  .work__photo {
+    width: 40vw;
+    height: 30vw;
+    position: relative;
+  }
+
+  .work__photo-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 80px;
+    overflow: hidden;
+  }
+
+  .work__photo-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"
+></script>
+
+<script
+  is:inline
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+<script
+  is:inline
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+></script>
+
+<script is:inline>
+  gsap.registerPlugin(ScrollTrigger);
+
+  let workinfoitems = document.querySelectorAll(".work__photo-item");
+
+  workinfoitems.forEach((item, index) => {
+    item.style.zIndex = workinfoitems.length - index;
+  });
+
+  gsap.set(".work__photo-item", {
+    clipPath: () => {
+      return "inset(0px 0px 0px 0px)";
+    },
+  });
+
+  const animation = gsap.to(".work__photo-item:not(:last-child)", {
+    clipPath: () => {
+      return "inset(0px 0px 100% 0px)";
+    },
+    stagger: 0.5,
+    ease: "none",
+  });
+
+  ScrollTrigger.create({
+    trigger: ".work",
+    start: "top top",
+    end: "bottom bottom",
+    animation: animation,
+    scrub: 1,
+  });
+</script>

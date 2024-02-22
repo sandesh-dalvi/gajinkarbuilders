@@ -3,7 +3,7 @@ import MainLayout from "../../layouts/main-layout.astro";
 ---
 
 <MainLayout>
-  <section class="relative isolate h-[55vh] contact-hero flex items-center">
+  <!-- <section class="relative isolate h-[55vh] contact-hero flex items-center">
     <div class="absolute inset-0 w-full h-full bg-blue-950 opacity-70 z-0">
     </div>
     <div class="absolute top-[50%] left-[5%] z-10">
@@ -14,103 +14,387 @@ import MainLayout from "../../layouts/main-layout.astro";
         We're Always Helpful To Lend A Hand
       </h1>
     </div>
+  </section> -->
+
+  <section class="faqs-heading">
+    <div class="p-4 py-10 lg:py-14 xl:py-16 2xl:py-20">
+      <div
+        class="flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-3 xl:gap-4"
+      >
+        <h1
+          class="text-center font-bold pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+        >
+          Unlock Answers to Your Queries
+        </h1>
+        <p class="text-center font-medium text-neutral-800 md:max-w-[600px]">
+          Explore our FAQs for insights on Construction, Rebuilding, and
+          Reselling. If your question isn't here, contact us for personalized
+          assistance.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <section class="bg-slate-100">
-    <div class="p-4 py-6 md:p-6 md:py-8 flex justify-center items-center">
-      <div
-        class="md:max-w-4xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-[1400px] grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 justify-center items-center gap-6 md:gap-7 lg:gap-8 xl:gap-10 2xl:gap-12"
-      >
-        <div
-          class="p-4 lg:p-6 border rounded-3xl bg-white transition-all shadow-none hover:shadow h-full xl:p-8 2xl:p-10"
+  <section>
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 xl:gap-6 2xl:gap-8"
+    >
+      <div>
+        <h2
+          class="text-primary font-extrabold text-2xl md:text-3xl xl:text-4xl text-center py-4 lg:py-6"
         >
-          <h2 class="font-bold text-2xl">Question Lorem, ipsum dolor.?</h2>
-          <p class="text-base text-neutral-700 p-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-            obcaecati.
-          </p>
+          General FAQs
+        </h2>
+        <div class="p-4">
+          <div class="accordion-wrapper">
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check1" checked />
+              <label class="accordion-label" for="check1"
+                >What services does Gajinkar Builders offer?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Gajinkar Builders provides a range of services, including
+                  construction, rebuilding, and property reselling.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check2" />
+              <label class="accordion-label" for="check2"
+                >How can I get in touch with Gajinkar Builders for inquiries?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  You can contact us through our website, email, or phone. Visit
+                  our 'Contact Us' page for more details.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check3" />
+              <label class="accordion-label" for="check3"
+                >What sets Gajinkar Builders apart from other construction
+                companies?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Our commitment to quality, transparent communication, and
+                  personalized service distinguishes us.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check4" />
+              <label class="accordion-label" for="check4"
+                >Are there financing options available for construction
+                projects?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Gajinkar Builders collaborates with financial partners;
+                  inquire during the initial consultation for available
+                  financing options.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check5" />
+              <label class="accordion-label" for="check5"
+                >How long has Gajinkar Builders been in the construction
+                industry?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Gajinkar Builders has been serving clients for 27 years, with
+                  expertise and experience in every project.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="p-4 lg:p-6 border rounded-3xl bg-white transition-all shadow-none hover:shadow h-full xl:p-8 2xl:p-10"
+      </div>
+      <div>
+        <h2
+          class="text-primary font-extrabold text-2xl md:text-3xl xl:text-4xl text-center py-4 lg:py-6"
         >
-          <h2 class="font-bold text-2xl">Question Lorem, ipsum dolor.?</h2>
-          <p class="text-base text-neutral-700 p-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-            obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Libero, reprehenderit.
-          </p>
+          Construction Services
+        </h2>
+        <div class="p-4">
+          <div class="accordion-wrapper">
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check6" checked />
+              <label class="accordion-label" for="check6"
+                >What types of construction projects does Gajinkar Builders
+                specialize in?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Gajinkar Builders excels in a variety of construction
+                  projects, spanning residential, commercial, and industrial
+                  sectors.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check7" />
+              <label class="accordion-label" for="check7"
+                >How does the construction process typically unfold?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Our construction process involves meticulous planning, skilled
+                  craftsmanship, and transparent communication to ensure a
+                  successful and timely project completion.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="p-4 lg:p-6 border rounded-3xl bg-white transition-all shadow-none hover:shadow h-full xl:p-8 2xl:p-10"
+      </div>
+      <div>
+        <h2
+          class="text-primary font-extrabold text-2xl md:text-3xl xl:text-4xl text-center py-4 lg:py-6"
         >
-          <h2 class="font-bold text-2xl">
-            Question Lorem, ipsum dolor. Lorem ipsum dolor sit.?
-          </h2>
-          <p class="text-base text-neutral-700 p-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-            obcaecati.
-          </p>
+          Rebuilding Expertise
+        </h2>
+        <div class="p-4">
+          <div class="accordion-wrapper">
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check8" checked />
+              <label class="accordion-label" for="check8"
+                >Can Gajinkar Builders handle rebuilding projects or
+                renovations?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Yes, Our expertise extends to rebuilding and renovations,
+                  breathing new life into existing structures with precision and
+                  care.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check9" />
+              <label class="accordion-label" for="check9"
+                >What considerations should be kept in mind when planning a
+                rebuilding project?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  We prioritize factors like structural integrity, design
+                  enhancements, and energy efficiency to deliver optimal results
+                  in rebuilding projects.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="p-4 lg:p-6 border rounded-3xl bg-white transition-all shadow-none hover:shadow h-full xl:p-8 2xl:p-10"
+      </div>
+      <div>
+        <h2
+          class="text-primary font-extrabold text-2xl md:text-3xl xl:text-4xl text-center py-4 lg:py-6"
         >
-          <h2 class="font-bold text-2xl">
-            Question Lorem, ipsum dolor. Lorem ipsum dolor sit amet.?
-          </h2>
-          <p class="text-base text-neutral-700 p-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-            obcaecati. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Id, sit!
-          </p>
+          Reselling Process
+        </h2>
+        <div class="p-4">
+          <div class="accordion-wrapper">
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check10" checked />
+              <label class="accordion-label" for="check10"
+                >How does Gajinkar Builders approach the reselling of
+                properties?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Our reselling process involves comprehensive strategies,
+                  including market analysis, effective marketing, and expert
+                  negotiation to maximize value for our clients.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check11" />
+              <label class="accordion-label" for="check11"
+                >Can Gajinkar Builders assist in assessing the resale value of a
+                property?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Certainly, we provide accurate property valuations and
+                  insights to help clients make informed decisions and achieve
+                  the best possible resale value.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="p-4 lg:p-6 border rounded-3xl bg-white transition-all shadow-none hover:shadow h-full xl:p-8 2xl:p-10"
+      </div>
+      <div>
+        <h2
+          class="text-primary font-extrabold text-2xl md:text-3xl xl:text-4xl text-center py-4 lg:py-6"
         >
-          <h2 class="font-bold text-2xl">Question Lorem, ipsum dolor.?</h2>
-          <p class="text-base text-neutral-700 p-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-            obcaecati. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Explicabo unde beatae sapiente tempore at nulla placeat molestias
-            earum iusto voluptate.
-          </p>
+          Construction Process
+        </h2>
+        <div class="p-4">
+          <div class="accordion-wrapper">
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check12" checked />
+              <label class="accordion-label" for="check12"
+                >What steps are involved in the Gajinkar Builders' construction
+                process?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Our construction process includes initial planning, design,
+                  permitting, construction, and a final inspection to ensure
+                  quality and compliance.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check13" />
+              <label class="accordion-label" for="check13"
+                >How long does the typical construction project take from start
+                to finish?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  The duration varies based on the project size and complexity,
+                  but we provide realistic timelines during the planning phase.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="p-4 lg:p-6 border rounded-3xl bg-white transition-all shadow-none hover:shadow h-full xl:p-8 2xl:p-10"
+      </div>
+      <div>
+        <h2
+          class="text-primary font-extrabold text-2xl md:text-3xl xl:text-4xl text-center py-4 lg:py-6"
         >
-          <h2 class="font-bold text-2xl">
-            Question Lorem, ipsum dolor. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit.?
-          </h2>
-          <p class="text-base text-neutral-700 p-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-            obcaecati.
-          </p>
+          Budget and Cost
+        </h2>
+        <div class="p-4">
+          <div class="accordion-wrapper">
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check14" checked />
+              <label class="accordion-label" for="check14"
+                >How does Gajinkar Builders determine the budget for a
+                construction project?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  We conduct a detailed assessment of project requirements,
+                  materials, and labor costs to provide a comprehensive and
+                  transparent budget estimate.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check15" />
+              <label class="accordion-label" for="check15"
+                >Are there any hidden costs that might arise during the
+                construction process?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  We prioritize transparency, and any potential additional costs
+                  are communicated and discussed with clients before
+                  implementation.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="p-4 lg:p-6 border rounded-3xl bg-white transition-all shadow-none hover:shadow h-full xl:p-8 2xl:p-10"
+      </div>
+      <div>
+        <h2
+          class="text-primary font-extrabold text-2xl md:text-3xl xl:text-4xl text-center py-4 lg:py-6"
         >
-          <h2 class="font-bold text-2xl">
-            Question Lorem, ipsum dolor. Lorem, ipsum dolor.?
-          </h2>
-          <p class="text-base text-neutral-700 p-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-            obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quia cupiditate expedita ea quaerat totam pariatur, eligendi nulla
-            id veritatis quibusdam?
-          </p>
+          Project Management
+        </h2>
+        <div class="p-4">
+          <div class="accordion-wrapper">
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check16" checked />
+              <label class="accordion-label" for="check16"
+                >How is project management handled by Gajinkar Builders?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Our dedicated project managers oversee every aspect, ensuring
+                  efficient coordination, timely progress, and effective
+                  communication throughout the project.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check17" />
+              <label class="accordion-label" for="check17"
+                >Can clients provide input or make changes during the
+                construction process?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Yes, we encourage client input, and we remain flexible to
+                  accommodate reasonable changes, keeping them informed of any
+                  impact on budget or timeline.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="p-4 lg:p-6 border rounded-3xl bg-white transition-all shadow-none hover:shadow h-full xl:p-8 2xl:p-10"
+      </div>
+      <div>
+        <h2
+          class="text-primary font-extrabold text-2xl md:text-3xl xl:text-4xl text-center py-4 lg:py-6"
         >
-          <h2 class="font-bold text-2xl">
-            Question Lorem, ipsum dolor. Lorem, ipsum.?
-          </h2>
-          <p class="text-base text-neutral-700 p-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-            obcaecati. Lorem ipsum dolor sit amet.
-          </p>
+          Completion and Handover
+        </h2>
+        <div class="p-4">
+          <div class="accordion-wrapper">
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check18" checked />
+              <label class="accordion-label" for="check18"
+                >What is the process for finalizing and completing a
+                construction project?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  The final stages involve thorough inspections, addressing any
+                  outstanding items, and obtaining client approval before the
+                  official project handover.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check19" />
+              <label class="accordion-label" for="check19"
+                >How does Gajinkar Builders ensure quality and satisfaction upon
+                project completion?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  We conduct a comprehensive final walkthrough with clients,
+                  addressing any concerns and ensuring their satisfaction before
+                  finalizing the handover.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <section
+    class="bg-gradient-to-r from-gray-800 via-gray-950 to-black rounded-t-3xl"
+  >
+    <h2
+      class="text-center text-xl p-2 py-6 text-white md:py-8 md:text-2xl font-semibold xl:text-3xl xl:py-10"
+    >
+      Let's explore tailored post-construction maintenance and support services
+      based on your specific requirements and preferences.
+    </h2>
   </section>
 </MainLayout>

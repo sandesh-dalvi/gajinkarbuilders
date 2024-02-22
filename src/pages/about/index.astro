@@ -1,11 +1,13 @@
 ---
-import AboutSection from "../../components/AboutSection.astro";
+import { Image } from "astro:assets";
 import MapSection from "../../components/MapSection.astro";
 import MainLayout from "../../layouts/main-layout.astro";
+
+import img1 from "../../assets/images/img1.png";
 ---
 
 <MainLayout title="Gajinkar Builders">
-  <section class="relative isolate h-[55vh] about-hero flex items-center">
+  <!-- <section class="relative isolate h-[55vh] about-hero flex items-center">
     <div class="absolute inset-0 w-full h-full bg-blue-950 opacity-70 z-0">
     </div>
     <div class="absolute top-[40%] left-[5%] z-10">
@@ -16,11 +18,85 @@ import MainLayout from "../../layouts/main-layout.astro";
         We Have A Goal To Achieve You To Your Destination
       </h1>
     </div>
-  </section>
+  </section> -->
 
   <section class="about-section">
-    <div class="pt-10">
-      <AboutSection />
+    <div class="py-0">
+      <div
+        class="flex flex-col justify-center items-center min-[991px]:flex-row"
+      >
+        <div
+          class="min-[991px]:min-w-[400px] px-4 min-[991px]:px-5 min-[991px]:pr-0"
+        >
+          <Image
+            src={img1}
+            class="object-cover w-full md:max-w-[550px] xl:max-w-[650px]"
+            alt=""
+          />
+        </div>
+        <div class="mb-10 min-[991px]:mb-5 w-full min-[991px]:w-fit">
+          <div
+            class="relative isolate self-end flex flex-col gap-2 z-[1] p-4 lg:pl-6 xl:pl-8"
+          >
+            <div
+              class="absolute inset-0 z-[-1] h-[80%] top-[21.1%] bg-[radial-gradient(circle_farthest-corner_at_10%_20%,rgba(176,229,208,1)_42%,rgba(92,202,238,0.41)_93.6%)] min-[991px]:right-[-100%] shadow-inner"
+            >
+            </div>
+            <div class="">
+              <!-- <span
+                class="text-[2px] md:text-base pb-1 leading-[0] font-bold text-fuchsia-900"
+              >
+                .
+              </span> -->
+              <h2
+                class="text-3xl md:text-4xl md:text-[45px] lg:text-6xl text-indigo-900 max-w-[510px] lg:max-w-[700px] font-extrabold"
+              >
+                About
+                <b class="font-medium italic text-indigo-800"
+                  >Gajinkar Builders</b
+                >
+              </h2>
+              <h3
+                class="text-xl text-indigo-800 max-w-[510px] lg:max-w-[700px] font-bold p-2"
+              >
+                Crafting Excellence in Construction Since 1995:
+              </h3>
+              <p
+                class="max-w-[520px] px-2 text-neutral-700 text-sm font-medium mb-0 md:text-base"
+              >
+                Founded by Santosh Gajinkar, Gajinkar Builders is a symbol of
+                construction excellence with a legacy spanning 27 years. Our
+                dedicated team blends visionary leadership with an unwavering
+                commitment to quality, transforming your dreams into timeless
+                realities. Since our inception in 1995, we've been steadfast in
+                crafting spaces that surpass expectations.
+              </p>
+              <h3
+                class="text-xl text-indigo-800 max-w-[510px] lg:max-w-[700px] font-bold p-2"
+              >
+                Diverse Ventures:
+              </h3>
+              <p
+                class="max-w-[520px] px-2 text-neutral-700 text-sm font-medium mb-0 md:text-base"
+              >
+                In addition to our construction endeavors, we proudly own a
+                tennis academy in Pundaliknagar, Porvorim, contributing to
+                sports development and community engagement. This diversified
+                approach reflects our commitment to both quality construction
+                and enriching community experiences.
+              </p>
+            </div>
+            <div class="mt-6 mb-5">
+              <h3 class="text-xl text-fuchsia-900 font-bold">
+                Our Headquarters:
+                <span class="text-lg text-teal-800 font-semibold"
+                  >Betim, Bardez - Goa</span
+                >
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -33,39 +109,28 @@ import MainLayout from "../../layouts/main-layout.astro";
           <h2 class="uppercase text-sm text-indigo-900 font-medium">
             Our Mission & Vision
           </h2>
-          <div class="py-1">
-            <h3
-              class="font-medium text-3xl md:text-4xl pb-3 md:pt-2 md:pb-4 xl:text-5xl"
-            >
-              Working For You
-            </h3>
-            <p class="text-neutral-500 font-normal xl:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              doloremque harum, minima saepe quam ipsum nostrum laborum
-              asperiores numquam quod.
-            </p>
-          </div>
+
           <div
             class="flex flex-col lg:flex-row justify-center items-center py-3"
           >
             <div>
               <h3 class="font-medium text-2xl md:text-3xl pb-2 xl:text-4xl">
-                Our Strategy
+                Mission
               </h3>
               <p class="text-neutral-500 font-normal xl:text-base">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. At,
-                inventore.
+                Providing reliable and affordable housing with a commitment to
+                exceptional quality in every endeavor.
               </p>
             </div>
             <div>
               <h3
                 class="font-medium text-2xl md:text-3xl py-2 md:pt-2 xl:text-4xl"
               >
-                Our Mission
+                Vision
               </h3>
               <p class="text-neutral-500 font-normal xl:text-base">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. At,
-                inventore.
+                To expand ambitiously into the hospitality and sports
+                industries, aiming for substantial growth and impact.
               </p>
             </div>
           </div>
@@ -78,86 +143,111 @@ import MainLayout from "../../layouts/main-layout.astro";
   </section>
 
   <section class="about-goals rounded-t-3xl">
-    <div class="flex justify-center items-center">
-      <div
-        class="p-4 py-6 flex flex-col gap-2 lg:flex-row-reverse lg:gap-8 2xl:gap-12 justify-center items-center xl:max-w-7xl 2xl:max-w-[1400px]"
+    <div class="p-4 py-6 lg:py-8">
+      <h2
+        class="text-center font-black text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
       >
-        <div class="flex justify-center items-center">
-          <div class="">
-            <h3 class="uppercase text-sm text-indigo-500 font-medium">
-              Delivering Innovaion
-            </h3>
-            <h2
-              class="text-primary font-bold text-3xl py-2 lg:text-4xl 2xl:text-5xl text-white"
+        Projects
+      </h2>
+      <h3
+        class="text-xl my-2 mt-4 md:my-4 md:mt-6 lg:my-6 lg:mt-8 text-center font-semibold text-white py-2 bg-[#00000061] shadow-inner rounded-lg md:text-2xl lg:text-3xl md:py-3 lg:py-5 2xl:py-6 xl:text-4xl"
+      >
+        Crafting Excellence in Construction - A Legacy Built
+      </h3>
+      <div
+        class="p-4 flex flex-col md:flex-row text-white gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10 justify-center items-center md:text-lg lg:text-xl"
+      >
+        <div
+          class="overflow-hidden rounded-2xl bg-[#00000071] md:max-w-[400px] border-2 border-fuchsia-500"
+        >
+          <Image src={img1} alt="" class="h-[20vh] object-cover lg:h-[30vh]" />
+          <div class="p-2 flex justify-between items-center">
+            <h2>Completed Projects - 6</h2>
+            <a
+              href="/completed-projects"
+              class="m-1 inline-block bg-indigo-600 p-2 rounded-3xl px-3"
+              >View All</a
             >
-              Sustainability Property
-              <span class="text-indigo-700">Goals As Expected</span>
-            </h2>
-            <p class="text-neutral-200 pb-2 2xl:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus, tempora voluptate eum harum unde natus, possimus
-              dignissimos sapiente tenetur repellendus voluptas omnis iure,
-              deleniti expedita!
-            </p>
-            <div class="py-4">
-              <a
-                href="../about/"
-                class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 rounded-[2rem] w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105"
-                >View Details</a
-              >
-            </div>
           </div>
         </div>
-        <div class="flex justify-center items-center">
-          <div
-            class="my-2 about-bg1 p-4 grid place-content-center h-[40vh] md:h-[700px] md:w-[700px] lg:h-[500px] lg:w-[500px]"
-          >
-            <div
-              class="bg-white p-2 overflow-hidden md:p-6 md:py-8 md:h-[500px] md:w-[500px] lg:h-[300px] lg:w-[300px] rounded-full flex justify-center items-center"
+        <div
+          class="overflow-hidden rounded-2xl bg-[#00000071] md:max-w-[400px] border-2 border-fuchsia-500"
+        >
+          <Image src={img1} alt="" class="h-[20vh] object-cover lg:h-[30vh]" />
+          <div class="p-2 flex justify-between items-center">
+            <h2>On - Going Projects - 2</h2>
+            <a
+              href="/ongoing-projects"
+              class="m-1 inline-block bg-indigo-600 p-2 rounded-3xl px-3"
+              >View All</a
             >
-              <div class="owl-carousel owl-theme md:max-w-md">
-                <div class="item">
-                  <div class="flex flex-col justify-center items-center gap-2">
-                    <img src="" alt="" class="w-[50px] h-[50px]" />
-                    <h2 class="text-center text-primary font-semibold">
-                      Quality Managemnet
-                    </h2>
-                    <p class="text-center text-neutral-500">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quis est laudantium voluptas obcaecati quos animi.
-                    </p>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="flex flex-col justify-center items-center gap-2">
-                    <img src="" alt="" class="w-[50px] h-[50px]" />
-                    <h2 class="text-center text-primary font-semibold">
-                      Quality Managemnet
-                    </h2>
-                    <p class="text-center text-neutral-500">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quis est laudantium voluptas obcaecati quos animi.
-                    </p>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="flex flex-col justify-center items-center gap-2">
-                    <img src="" alt="" class="w-[50px] h-[50px]" />
-                    <h2 class="text-center text-primary font-semibold">
-                      Quality Managemnet
-                    </h2>
-                    <p class="text-center text-neutral-500">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quis est laudantium voluptas obcaecati quos animi.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <section>
+    <div class="py-8 bg-fuchsia-200">
+      <h2
+        class="text-center font-bold text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl"
+      >
+        What Sets Gajinkar Builders Apart?
+      </h2>
+    </div>
+    <div class="flex justify-center items-center">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-3 p-4 md:gap-6 md:p-8 xl:gap-8 xl:p-10 lg:max-w-[1100px]"
+      >
+        <div
+          class="border-2 border-fuchsia-600 rounded-md p-2 flex flex-col justify-center items-center text-center transition-all duration-700 shadow-xl hover:shadow h-full lg:p-4"
+        >
+          <h3 class="font-bold text-xl lg:text-2xl">Legacy of Excellence</h3>
+          <p class="font-medium pt-2 text-base lg:text-lg">
+            We bring a wealth of experience and a proven track record of
+            construction excellence.
+          </p>
+        </div>
+        <div
+          class="border-2 border-fuchsia-600 rounded-md p-2 flex flex-col justify-center items-center text-center transition-all duration-700 shadow-xl hover:shadow h-full lg:p-4"
+        >
+          <h3 class="font-bold text-xl lg:text-2xl">Visionary Leadership</h3>
+          <p class="font-medium pt-2 text-base lg:text-lg">
+            Our team is guided by visionary leadership committed to pushing the
+            boundaries of quality construction.
+          </p>
+        </div>
+        <div
+          class="border-2 border-fuchsia-600 rounded-md p-2 flex flex-col justify-center items-center text-center transition-all duration-700 shadow-xl hover:shadow h-full lg:p-4"
+        >
+          <h3 class="font-bold text-xl lg:text-2xl">Commitment to Quality</h3>
+          <p class="font-medium pt-2 text-base lg:text-lg">
+            Our unwavering commitment to quality ensures that every project
+            transforms dreams into enduring realities.
+          </p>
+        </div>
+        <div
+          class="border-2 border-fuchsia-600 rounded-md p-2 flex flex-col justify-center items-center text-center transition-all duration-700 shadow-xl hover:shadow h-full lg:p-4"
+        >
+          <h3 class="font-bold text-xl lg:text-2xl">Community Engagement</h3>
+          <p class="font-medium pt-2 text-base lg:text-lg">
+            Beyond construction, we proudly own a tennis academy in
+            Pundaliknagar, Porvorim, contributing to sports development and
+            community enrichment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="bg-gradient-to-r from-gray-800 via-gray-950 to-black rounded-t-3xl"
+  >
+    <h2
+      class="text-center text-2xl p-2 py-6 text-white capitalize md:py-8 md:text-3xl font-semibold xl:text-4xl xl:py-10"
+    >
+      Where excellence is not just a goal; it's our legacy.
+    </h2>
   </section>
 
   <MapSection />
@@ -184,31 +274,3 @@ import MainLayout from "../../layouts/main-layout.astro";
     );
   }
 </style>
-
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"></script>
-<script is:inline>
-  $(".owl-carousel").owlCarousel({
-    loop: true,
-    margin: 10,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 1,
-      },
-      1000: {
-        items: 1,
-      },
-    },
-  });
-</script>
