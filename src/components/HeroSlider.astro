@@ -1,10 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import img1 from "../assets/images/img1.png";
-import img2 from "../assets/images/img2.jpg";
-import img3 from "../assets/images/img3.jpg";
-import img4 from "../assets/images/img4.jpg";
-import img5 from "../assets/images/img5.jpg";
+import img1 from "../assets/images/bridgeview/bridgemain.jpg";
+import img2 from "../assets/images/aspiretowers/aspiremain.jpeg";
+import img3 from "../assets/images/rental.jpg";
+import img4 from "../assets/images/commercial.jpg";
 ---
 
 <section>
@@ -12,67 +11,63 @@ import img5 from "../assets/images/img5.jpg";
     <!-- list Items -->
     <div class="list">
       <div class="item active">
-        <Image src={img1} alt="Sliderq 1" />
+        <Image src={img1} alt="Sliderq 2" />
         <div class="content">
-          <p>design</p>
-          <h2>Sliderq 01</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-            neque?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ipsum, ex.
-          </p>
+          <p></p>
+          <h2>Welcome to Gajinkar Builders</h2>
+          <p>Building Dreams, Transforming Spaces</p>
+          <a
+            href="/completed-projects"
+            class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-500 to-indigo-900 rounded-lg border-2 border-indigo-900 w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105 block"
+          >
+            Know More
+          </a>
         </div>
       </div>
 
       <div class="item">
-        <Image src={img2} alt="Sliderq 2" />
+        <Image src={img2} alt="Slide 5" />
         <div class="content">
-          <p>design</p>
-          <h2>Sliderq 02</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-            neque?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ipsum, ex.
-          </p>
+          <p></p>
+          <h2>Explore Our Exceptional Projects</h2>
+          <p>Witness Excellence in Every Brick</p>
+          <a
+            href="/ongoing-projects"
+            class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-500 to-indigo-900 rounded-lg border-2 border-indigo-900 w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105 block"
+          >
+            Know More
+          </a>
         </div>
       </div>
-
       <div class="item">
-        <Image src={img3} alt="Slide 3" />
+        <Image src={img3} alt="Slide 5" />
         <div class="content">
-          <p>design</p>
-          <h2>Sliderq 03</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-            neque?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ipsum, ex.
-          </p>
+          <p>Property For Sale/Rent</p>
+          <h2>1BHK Flat in Gera River of Joy</h2>
+          <p>For Rent 25000 / month</p>
+          <p>For Sale 58 Lakhs with all Amenities</p>
+          <a
+            href="/contact"
+            class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-500 to-indigo-900 rounded-lg border-2 border-indigo-900 w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105 block"
+          >
+            Contact
+          </a>
         </div>
       </div>
-
       <div class="item">
-        <Image src={img4} alt="Slide 4" />
+        <Image src={img4} alt="Slide 5" />
         <div class="content">
-          <p>design</p>
-          <h2>Sliderq 04</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-            neque?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ipsum, ex.
-          </p>
-        </div>
-      </div>
+          <p>Commercial Space for Rent/ Sale</p>
+          <h2>Rent 1.5 Lakhs/ month</h2>
+          <p>Outright Sale for 30K / sqm</p>
+          <p>Suitable for Showroom, Furniture Manufacture or Tile Showroom</p>
 
-      <div class="item">
-        <Image src={img5} alt="Slide 5" />
-        <div class="content">
-          <p>design</p>
-          <h2>Sliderq 05</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-            neque?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ipsum, ex.
-          </p>
+          <a
+            href="/contact"
+            class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-500 to-indigo-900 rounded-lg border-2 border-indigo-900 w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105 block"
+          >
+            Contact
+          </a>
         </div>
       </div>
     </div>
@@ -84,32 +79,19 @@ import img5 from "../assets/images/img5.jpg";
     </div>
 
     <!-- thumbnail -->
-    <div class="thumbnail">
+    <!-- <div class="thumbnail">
       <div class="item active">
-        <Image src={img1} alt="Sliderq 1" />
-        <div class="content">Name Sliderq</div>
+        <Image src={img1} alt="Slider 1" />
+        <div class="content font-bold bg-[#ffffffd2] p-2">
+          Completed Projects
+        </div>
       </div>
 
       <div class="item">
         <Image src={img2} alt="Sliderq 2" />
-        <div class="content">Name Sliderq</div>
+        <div class="content font-bold bg-[#ffffffd2] p-2">Ongoing Projects</div>
       </div>
-
-      <div class="item">
-        <Image src={img3} alt="Sliderq 3" />
-        <div class="content">Name Sliderq</div>
-      </div>
-
-      <div class="item">
-        <Image src={img4} alt="Sliderq 4" />
-        <div class="content">Name Sliderq</div>
-      </div>
-
-      <div class="item">
-        <Image src={img5} alt="Sliderq 5" />
-        <div class="content">Name Sliderq</div>
-      </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -128,7 +110,7 @@ import img5 from "../assets/images/img5.jpg";
   }
   .sliderq .list .item img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
   }
   .sliderq .list .item::after {
@@ -140,7 +122,7 @@ import img5 from "../assets/images/img5.jpg";
     bottom: 0;
     background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.747) 10%,
+      rgba(24, 6, 54, 0.445) 10%,
       transparent
     );
   }
@@ -158,8 +140,12 @@ import img5 from "../assets/images/img5.jpg";
     letter-spacing: 10px;
   }
   .sliderq .list .item .content h2 {
-    font-size: 100px;
+    font-size: 3.2rem;
     margin: 0;
+    font-weight: bold;
+  }
+  .sliderq .list .item .content a {
+    margin-top: 10px;
   }
   .sliderq .list .item.active {
     opacity: 1;
@@ -174,7 +160,9 @@ import img5 from "../assets/images/img5.jpg";
   }
   .sliderq .list .item.active p:nth-child(1),
   .sliderq .list .item.active h2,
-  .sliderq .list .item.active p:nth-child(3) {
+  .sliderq .list .item.active p:nth-child(3),
+  .sliderq .list .item.active p:nth-child(4),
+  .sliderq .list .item.active a {
     transform: translateY(30px);
     filter: blur(20px);
     opacity: 0;
@@ -183,8 +171,15 @@ import img5 from "../assets/images/img5.jpg";
   .sliderq .list .item.active h2 {
     animation-delay: 1s;
   }
-  .sliderq .list .item.active p:nth-child(3) {
+  .sliderq .list .item.active p:nth-child(3),
+  .sliderq .list .item.active p:nth-child(4) {
     animation-duration: 1.3s;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .sliderq .list .item.active a {
+    animation-duration: 1.4s;
   }
   .arrows {
     position: absolute;
@@ -207,10 +202,10 @@ import img5 from "../assets/images/img5.jpg";
     background-color: #eee;
     color: black;
   }
-  .thumbnail {
+  /* .thumbnail {
     position: absolute;
     bottom: 50px;
-    z-index: 11;
+    z-index: 9;
     display: flex;
     gap: 10px;
     width: 100%;
@@ -242,16 +237,32 @@ import img5 from "../assets/images/img5.jpg";
   .thumbnail .item .content {
     position: absolute;
     inset: auto 10px 10px 10px;
-  }
+  } */
   @media screen and (max-width: 678px) {
-    .thumbnail {
+    /* .thumbnail {
       justify-content: start;
+    } */
+
+    .sliderq .list .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sliderq .list .item .content {
+      margin-top: 60px;
     }
     .sliderq .list .item .content h2 {
-      font-size: 60px;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    .sliderq .list .item .content p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 500;
     }
     .arrows {
-      top: 10%;
+      top: 15%;
     }
   }
 </style>
@@ -260,7 +271,7 @@ import img5 from "../assets/images/img5.jpg";
   let items = document.querySelectorAll(".sliderq .list .item");
   let next = document.getElementById("next");
   let prev = document.getElementById("prev");
-  let thumbnails = document.querySelectorAll(".thumbnail .item");
+  // let thumbnails = document.querySelectorAll(".thumbnail .item");
 
   // config param
   let countItem = items.length;
@@ -288,13 +299,13 @@ import img5 from "../assets/images/img5.jpg";
   function showSliderq() {
     // remove item active old
     let itemActiveOld = document.querySelector(".sliderq .list .item.active");
-    let thumbnailActiveOld = document.querySelector(".thumbnail .item.active");
+    // let thumbnailActiveOld = document.querySelector(".thumbnail .item.active");
     itemActiveOld.classList.remove("active");
-    thumbnailActiveOld.classList.remove("active");
+    // thumbnailActiveOld.classList.remove("active");
 
     // active new item
     items[itemActive].classList.add("active");
-    thumbnails[itemActive].classList.add("active");
+    // thumbnails[itemActive].classList.add("active");
 
     // clear auto time run sliderq
     clearInterval(refreshInterval);
@@ -304,10 +315,10 @@ import img5 from "../assets/images/img5.jpg";
   }
 
   // click thumbnail
-  thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener("click", () => {
-      itemActive = index;
-      showSliderq();
-    });
-  });
+  // thumbnails.forEach((thumbnail, index) => {
+  //   thumbnail.addEventListener("click", () => {
+  //     itemActive = index;
+  //     showSliderq();
+  //   });
+  // });
 </script>

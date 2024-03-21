@@ -1,5 +1,5 @@
 ---
-import Header from "../components/Header";
+import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.astro";
 const {
   title,
@@ -16,6 +16,23 @@ const {
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta property="og:image" content={image} />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("TMkiu3vgObJd0de7x");
+      })();
+    </script>
 
     <title>{title}</title>
     <style is:global>
@@ -39,11 +56,11 @@ const {
 
       .slide_diagonal {
         color: #fff;
-        background-color: #ff3cac;
+        background-color: #5b08e0;
         background-image: linear-gradient(
           225deg,
-          #ff3cac 0%,
-          #784ba0 50%,
+          #3008e0 0%,
+          #19187e 50%,
           #2b86c5 100%
         );
         border: 2px solid #0027a8;
@@ -64,12 +81,12 @@ const {
         box-shadow: inset 500px 150px 0 0 #0027a8;
         color: #fff;
       }
-      .contact-hero {
+      /* .contact-hero {
         background-image: url("/images/abouthero.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-      }
+      } */
       .accordion-wrapper {
         /* border-radius: 8px; */
         overflow: hidden;
@@ -98,8 +115,8 @@ const {
         padding: 16px;
         background-image: linear-gradient(
           109.6deg,
-          rgb(205, 251, 254) 11.2%,
-          rgba(163, 230, 255, 1) 91.1%
+          rgb(255, 255, 255) 11.2%,
+          rgb(217, 229, 233) 91.1%
         );
         font-weight: bold;
         cursor: pointer;
@@ -123,8 +140,8 @@ const {
         color: #000;
         background-image: linear-gradient(
           109.6deg,
-          rgb(205, 251, 254) 11.2%,
-          rgba(163, 230, 255, 1) 91.1%
+          rgb(255, 255, 255) 11.2%,
+          rgb(217, 229, 233) 91.1%
         );
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
@@ -156,13 +173,74 @@ const {
           font-size: 18px;
         }
       }
+
+      .services-heading {
+        color: #000000;
+
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='62' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23ffffff' fill-opacity='0.6'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+          radial-gradient(#6c6ee928, #c8cef525, #eef0f83a, #ffffff);
+      }
+
+      .contacts-bgs {
+        color: rgb(218, 218, 218);
+
+        background-color: #000000;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='62' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%237c2b05' fill-opacity='0.2'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+          radial-gradient(#aa3905, #9e3606, #bb4907, #882e05);
+      }
+
+      .gallery-slider {
+        position: relative;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      .gallery-slider .gallery-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+        width: max-gallery-content;
+      }
+      .gallery-slider .gallery-content div:nth-child(1) {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-weight: bold;
+        position: relative;
+      }
+
+      .gallery-slider .gallery-content div:nth-child(2) {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .gallery-slider .gallery-content a {
+        border: 2px solid rgba(0, 13, 85, 0.8);
+        background: transparent;
+        color: rgb(0, 13, 85);
+        font-family: Poppins;
+        letter-spacing: 5px;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: bold;
+        display: inline-block;
+      }
     </style>
   </head>
   <body class="min-h-screen">
     <main>
-      <Header client:load />
+      <Header client:only="react" />
       <slot />
       <Footer />
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" is:inline></script>
+    <script is:inline>
+      AOS.init();
+    </script>
   </body>
 </html>

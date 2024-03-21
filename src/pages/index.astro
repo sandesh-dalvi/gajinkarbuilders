@@ -2,22 +2,52 @@
 import MainLayout from "../layouts/main-layout.astro";
 
 import HeroSlider from "../components/HeroSlider.astro";
-import GallerySlider from "../components/GallerySlider.astro";
+import GallerySlider from "../components/GallerySlider";
 import MapSection from "../components/MapSection.astro";
 import AboutSection from "../components/AboutSection.astro";
 import { Image } from "astro:assets";
 
-import building from "../assets/images/building.png";
-import projects1 from "../assets/images/projects.jpg";
-import aboutsection from "../assets/images/aboutsection.png";
+import building from "../assets/icons/apartment_3.png";
+import door from "../assets/icons/door.png";
+import flat from "../assets/icons/house_2504003.png";
+import privacy from "../assets/icons/privacy.png";
+import cctv from "../assets/icons/cctv.png";
+import evcharge from "../assets/icons/charger.png";
+import gym from "../assets/icons/gym.png";
+
+import construction from "../assets/icons/excavator.png";
+import rebuild from "../assets/icons/hook_1.png";
+
+import projects1 from "../assets/images/bridgeview/bridgemain.jpg";
+import projects2 from "../assets/images/aspiretowers/aspiremain.jpeg";
+import projects3 from "../assets/images/aspiretowers/aspire2.jpg";
+import projects4 from "../assets/images/aurasky/auramain.jpg";
+import aboutsection from "../assets/images/construct2.jpg";
 ---
 
 <MainLayout title="Gajinkar Builders">
   <HeroSlider />
 
-  <section class="about-section">
+  <section class="about-section mt-1 md:mt-2 lg:mt-8 lg:mb-2 xl:mt-10 xl:mb-4">
     <AboutSection />
   </section>
+
+  <!-- <section>
+    <div class="image-view"></div>
+
+    <div class="image-box">
+      <div id="prev-btn"></div>
+      <div id="next-btn"></div>
+      <div id="close-btn">X</div>
+    </div>
+  </section> -->
+
+  <div class="py-6 md:py-8 flex justify-center items-center">
+    <div
+      class="w-[250px] md:w-[600px] lg:w-[850px] xl:w-[1000px] h-2 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-200 via-neutral-100 to-white"
+    >
+    </div>
+  </div>
 
   <section
     class="amenities mt-4 lg:mt-6 p-4 sm:px-6 md:px-16 lg:px-20 xl:px-24 2xl:px-32"
@@ -26,9 +56,9 @@ import aboutsection from "../assets/images/aboutsection.png";
       <div class="md:col-span-2">
         <div>
           <h2
-            class="text-4xl lg:text-5xl 2xl:text-6xl font-extrabold mt-1 leading-[1.2] text-black"
+            class="text-3xl lg:text-4xl 2xl:text-5xl font-extrabold mt-1 leading-[1.2] text-black"
           >
-            Amenities We Offer
+            Exceptional Amenities we offer
             <b class="font-medium italic text-blue-700">
               Gajinkar Builders Special!
             </b>
@@ -36,81 +66,110 @@ import aboutsection from "../assets/images/aboutsection.png";
         </div>
       </div>
 
-      <div class="shadow-lg rounded-md">
+      <div class="shadow-md rounded-lg">
         <div
-          class="p-4 flex flex-col justify-center items-center slide_diagonal"
+          class="p-4 grid grid-cols-1 justify-start items-center gap-1 md:gap-2 h-full slide_diagonal"
         >
-          <h3 class="text-2xl">Comfortable Flat</h3>
+          <h3 class="text-2xl text-center">Comfortable Flat</h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Facere,pariatur?
+            Immerse yourself in unparalleled comfort with spacious interiors and
+            modern amenities, creating a cozy sanctuary to call home.
           </p>
-          <Image src={building} class="w-12 h-12 self-end" alt="" />
+          <Image
+            src={flat}
+            class="w-12 h-12 self-end block justify-self-end"
+            alt=""
+          />
         </div>
       </div>
 
-      <div class="shadow-lg rounded-md">
+      <div class="shadow-md rounded-lg">
         <div
-          class="p-4 flex flex-col justify-center items-center slide_diagonal-reverse"
+          class="p-4 grid grid-cols-1 justify-start items-center gap-1 md:gap-2 h-full slide_diagonal-reverse"
         >
-          <h3 class="text-2xl">Comfortable Flat</h3>
+          <h3 class="text-2xl text-center">Sophisticated Door</h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
-            pariatur?
+            Welcome guests with elegance and style as you step through our
+            meticulously crafted doors, designed to enhance the aesthetic appeal
+            of your living space.
           </p>
-          <Image src={building} class="w-12 h-12 self-end" alt="" />
+          <Image
+            src={door}
+            class="w-12 h-12 self-end block justify-self-end"
+            alt=""
+          />
         </div>
       </div>
 
-      <div class="shadow-lg rounded-md">
+      <div class="shadow-md rounded-lg">
         <div
-          class="p-4 flex flex-col justify-center items-center slide_diagonal"
+          class="p-4 grid grid-cols-1 justify-start items-center gap-1 md:gap-2 h-full slide_diagonal"
         >
-          <h3 class="text-2xl">Comfortable Flat</h3>
+          <h3 class="text-2xl text-center">Private Security</h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
-            pariatur?
+            Rest assured with round-the-clock security personnel and advanced
+            surveillance systems, providing peace of mind for you and your loved
+            ones.
           </p>
-          <Image src={building} class="w-12 h-12 self-end" alt="" />
+          <Image
+            src={privacy}
+            class="w-12 h-12 self-end block justify-self-end"
+            alt=""
+          />
         </div>
       </div>
 
-      <div class="shadow-lg rounded-md">
+      <div class="shadow-md rounded-lg">
         <div
-          class="p-4 flex flex-col justify-center items-center slide_diagonal-reverse"
+          class="p-4 grid grid-cols-1 justify-start items-center gap-1 md:gap-2 h-full slide_diagonal-reverse"
         >
-          <h3 class="text-2xl">Comfortable Flat</h3>
+          <h3 class="text-2xl text-center">Fitness Center</h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
-            pariatur?
+            Stay active and healthy with exclusive access to our
+            state-of-the-art fitness center, equipped with the latest exercise
+            equipment and personalized training programs.
           </p>
-          <Image src={building} class="w-12 h-12 self-end" alt="" />
+          <Image
+            src={gym}
+            class="w-12 h-12 self-end block justify-self-end"
+            alt=""
+          />
         </div>
       </div>
 
-      <div class="shadow-lg rounded-md">
+      <div class="shadow-md rounded-lg">
         <div
-          class="p-4 flex flex-col justify-center items-center slide_diagonal"
+          class="p-4 grid grid-cols-1 justify-start items-center gap-1 md:gap-2 h-full slide_diagonal"
         >
-          <h3 class="text-2xl">Comfortable Flat</h3>
+          <h3 class="text-2xl text-center">EV Charging Point</h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
-            pariatur?
+            Embrace sustainable living with convenient EV charging points,
+            supporting environmentally friendly transportation options for
+            residents.
           </p>
-          <Image src={building} class="w-12 h-12 self-end" alt="" />
+          <Image
+            src={evcharge}
+            class="w-12 h-12 self-end block justify-self-end"
+            alt=""
+          />
         </div>
       </div>
 
-      <div class="shadow-lg rounded-md">
+      <div class="shadow-md rounded-lg">
         <div
-          class="p-4 flex flex-col justify-center items-center slide_diagonal-reverse"
+          class="p-4 grid grid-cols-1 justify-start items-center gap-1 md:gap-2 h-full slide_diagonal-reverse"
         >
-          <h3 class="text-2xl">Comfortable Flat</h3>
+          <h3 class="text-2xl text-center">CCTV Surveillance</h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
-            pariatur?
+            Ensure the safety of your surroundings with comprehensive CCTV
+            surveillance coverage, monitoring key areas for enhanced security
+            and peace of mind.
           </p>
-          <Image src={building} class="w-12 h-12 self-end" alt="" />
+          <Image
+            src={cctv}
+            class="w-12 h-12 self-end block justify-self-end"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -119,61 +178,76 @@ import aboutsection from "../assets/images/aboutsection.png";
   <section class="projects-section rounded-b-3xl mt-3 mb-3">
     <div class="py-4 pb-6">
       <h2
-        class="text-primary font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center pb-4 lg:py-6 text-white"
+        class="text-primary font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center pb-4 lg:py-6"
       >
         Our Projects
       </h2>
+      <h3
+        class="text-center font-bold text-blue-950 text-lg lg:text-2xl mb-2 lg:mb-4 2xl:mb-6"
+      >
+        Discover Our Work
+      </h3>
       <div
         class="flex flex-col md:flex-row justify-center items-center gap-6 px-4"
       >
         <div class="flex flex-col justify-center items-center lg:max-w-lg">
           <div>
-            <Image src={projects1} alt="" />
+            <Image
+              src={projects3}
+              alt=""
+              class="md:w-80 md:h-80 object-contain bg-white"
+            />
           </div>
-          <div class="w-[90%] bg-white p-4 shadow-2xl -mt-10">
+          <div
+            class="w-[90%] h-[310px] bg-white p-4 shadow-2xl -mt-10 rounded-2xl grid grid-cols-1 justify-center items-start gap-2 md:gap-3 lg:gap-4"
+          >
             <h3 class="text-center font-bold text-primary text-2xl lg:text-3xl">
               On-going Projects
             </h3>
             <p class="text-sm xl:text-base font-medium text-neutral-500 mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              voluptatem maiores, veritatis inventore harum voluptatum quis
-              delectus hic nihil expedita!
+              Embark on a journey of innovation and progress as we bring our
+              ongoing projects to life. From groundbreaking concepts to
+              meticulous execution, witness the evolution of modern architecture
+              in real-time. Explore our ongoing projects and be part of the
+              journey towards a brighter future.
             </p>
-            <div class="mt-4 py-2">
+            <div class="mt-4 md:mt-0 py-2 justify-self-end">
               <a
-                href="/about"
-                class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 rounded-[2rem] w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105"
+                href="/ongoing-projects"
+                class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-500 to-indigo-900 rounded-lg border-2 border-indigo-900 w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105"
               >
-                Know More
-                <span
-                  class="w-2 h-2 rounded-full shadow bg-transparent m-2 border"
-                ></span>
+                Discover Details
               </a>
             </div>
           </div>
         </div>
         <div class="flex flex-col justify-center items-center lg:max-w-lg">
           <div>
-            <Image src={projects1} alt="" />
+            <Image
+              src={projects4}
+              alt=""
+              class="md:w-80 md:h-80 object-cover"
+            />
           </div>
-          <div class="w-[90%] bg-white p-4 shadow-2xl -mt-10">
-            <h3 class="text-center font-bold text-primary text-2xl">
+          <div
+            class="w-[90%] h-[310px] bg-white p-4 shadow-2xl -mt-10 rounded-2xl grid grid-cols-1 justify-center items-start gap-2 md:gap-3 lg:gap-4"
+          >
+            <h3 class="text-center font-bold text-primary text-2xl lg:text-3xl">
               Completed projects
             </h3>
             <p class="text-sm xl:text-base font-medium text-neutral-500 mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              voluptatem maiores, veritatis inventore harum voluptatum quis
-              delectus hic nihil expedita!
+              Explore our completed projects, where dreams become reality. From
+              luxurious residences to modern commercial spaces, witness the
+              manifestation of architectural brilliance and uncompromising
+              quality. Take a journey through our portfolio and envision your
+              next venture.
             </p>
-            <div class="mt-4 py-2">
+            <div class="mt-4 py-2 justify-self-end">
               <a
-                href="/about"
-                class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 rounded-[2rem] w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105"
+                href="/completed-projects"
+                class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-500 to-indigo-900 rounded-lg border-2 border-indigo-900 w-fit text-white text-center font-bold p-4 px-6 shadow-2xl scale-100 transition-all hover:scale-105"
               >
-                Know More
-                <span
-                  class="w-2 h-2 rounded-full shadow bg-transparent m-2 border"
-                ></span>
+                Discover Details
               </a>
             </div>
           </div>
@@ -184,18 +258,16 @@ import aboutsection from "../assets/images/aboutsection.png";
 
   <section class="gallery-section pt-4 lg:mt-6 2xl:mt-8">
     <div class="py-6">
-      <GallerySlider />
+      <GallerySlider client:load />
     </div>
   </section>
 
-  <section
-    class="services-section rounded-t-3xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900"
-  >
+  <section class="services-section rounded-t-3xl projects-section">
     <div class="py-6">
       <h2
-        class="text-primary font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center py-6 text-white"
+        class="text-primary font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center py-6"
       >
-        Services We Provide
+        Explore Our Services
       </h2>
       <div
         class="flex flex-col p-4 md:p-8 lg:px-12 xl:px-16 2xl:px-20 md:flex-row gap-6 lg:gap-8 justify-center items-center"
@@ -204,15 +276,15 @@ import aboutsection from "../assets/images/aboutsection.png";
           <div
             class="p-4 pt-6 flex flex-col justify-center items-center slide_diagonal-reverse"
           >
-            <Image src={building} class="w-12 h-12" alt="" />
+            <Image src={construction} class="w-12 h-12" alt="" />
             <h3 class="text-2xl md:text-xl lg:text-2xl py-2 text-center">
-              Property Management
+              Construction Services
             </h3>
             <p class="text-center pb-2">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
-              pariatur?
+              Transforming dreams into reality with our construction excellence,
+              crafting spaces that reflect precision and innovation.
             </p>
-            <a href="#" class="flex gap-2 text-amber-600">
+            <a href="/services" class="flex gap-2 text-amber-600">
               Learn More
               <span>
                 <svg
@@ -236,15 +308,15 @@ import aboutsection from "../assets/images/aboutsection.png";
           <div
             class="p-4 pt-6 flex flex-col justify-center items-center slide_diagonal"
           >
-            <Image src={building} class="w-12 h-12" alt="" />
+            <Image src={rebuild} class="w-12 h-12" alt="" />
             <h3 class="text-2xl md:text-xl lg:text-2xl py-2 text-center">
-              Comfortable Flat
+              Rebuilding Services
             </h3>
             <p class="text-center pb-2">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
-              pariatur?
+              Unlock new possibilities with our Rebuilding Services, restoring
+              structures with precision and turning dreams into reality.
             </p>
-            <a href="#" class="flex gap-2 text-amber-600"
+            <a href="/services" class="flex gap-2 text-amber-600"
               >Learn More
               <span
                 ><svg
@@ -270,13 +342,14 @@ import aboutsection from "../assets/images/aboutsection.png";
           >
             <Image src={building} class="w-12 h-12" alt="" />
             <h3 class="text-2xl md:text-xl lg:text-2xl py-2 text-center">
-              Comfortable Flat
+              Reselling Services
             </h3>
             <p class="text-center pb-2">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
-              pariatur?
+              Maximize returns with our Reselling Services, guiding you through
+              the complexities with confidence to unlock hidden value in your
+              properties.
             </p>
-            <a href="#" class="flex gap-2 text-amber-600"
+            <a href="/services" class="flex gap-2 text-amber-600"
               >Learn More
               <span
                 ><svg
@@ -302,52 +375,59 @@ import aboutsection from "../assets/images/aboutsection.png";
 
   <section class="faq-section">
     <div
-      class="flex flex-col-reverse lg:flex-row justify-center items-center gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12"
+      class="flex flex-col-reverse md:flex-row justify-center items-center gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12"
     >
-      <div>
+      <div class="md:py-6 lg:py-10">
         <h2
-          class="text-primary font-extrabold text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center py-4 lg:py-6"
+          class="text-primary font-extrabold text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center md:p-2 py-4 md:py-6 lg:p-4"
         >
-          Frequently Asked Questions
+          Your Queries, Our Answers
         </h2>
         <div class="p-4">
           <div class="accordion-wrapper">
             <div class="accordion">
               <input type="radio" name="radio-a" id="check1" checked />
-              <label class="accordion-label" for="check1">Accordion 1</label>
+              <label class="accordion-label" for="check1"
+                >What services does Gajinkar Builders offer?</label
+              >
               <div class="accordion-content">
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquid, accusamus? &#128522;
+                  Gajinkar Builders provides a range of services, including
+                  construction, rebuilding, and property reselling.
                 </p>
               </div>
             </div>
             <div class="accordion">
               <input type="radio" name="radio-a" id="check2" />
-              <label class="accordion-label" for="check2">Accordion 2</label>
+              <label class="accordion-label" for="check2"
+                >How can I get in touch with Gajinkar Builders for inquiries?</label
+              >
               <div class="accordion-content">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Molestiae facere ut libero soluta reiciendis asperiores?
+                  You can contact us through our website, email, or phone. Visit
+                  our 'Contact Us' page for more details.
                 </p>
               </div>
             </div>
             <div class="accordion">
               <input type="radio" name="radio-a" id="check3" />
-              <label class="accordion-label" for="check3">Accordion 3</label>
+              <label class="accordion-label" for="check3"
+                >What sets Gajinkar Builders apart from other construction
+                companies?</label
+              >
               <div class="accordion-content">
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
-                  obcaecati assumenda dicta facere nemo ullam officia aut ut
-                  voluptates. Illo laudantium esse alias laboriosam obcaecati
-                  eaque tenetur repellendus deleniti omnis!
+                  Our commitment to quality, transparent communication, and
+                  personalized service distinguishes us.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="w-full lg:w-auto lg:justify-self-end">
+      <div
+        class="w-full lg:h-full lg:w-auto lg:max-w-[550px] xl:max-w-[650px] lg:justify-self-end lg:self-stretch"
+      >
         <Image
           src={aboutsection}
           alt=""
@@ -357,20 +437,180 @@ import aboutsection from "../assets/images/aboutsection.png";
     </div>
   </section>
 
-  <MapSection />
+  <section>
+    <MapSection />
+  </section>
 </MainLayout>
+
 <style>
   .projects-section {
     background-image: linear-gradient(
-      111.4deg,
-      rgba(7, 7, 9, 1) 6.5%,
-      rgba(27, 24, 113, 1) 93.2%
+      109.6deg,
+      rgb(217, 229, 233) 91.1%,
+      rgb(255, 255, 255) 11.2%,
+      rgb(217, 229, 233) 91.1%
     );
   }
 
-  /* FAQ Section */
-  .faq-section {
-    /* background-color: #8ec5fc; */
-    /* background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%); */
+  /******** js related *******/
+
+  .image-view {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    display: none;
+    z-index: 999999;
+  }
+
+  .image-box {
+    width: 50vw;
+    height: 80vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*background: tomato;*/
+    display: none;
+    z-index: 99999999;
+  }
+
+  #close-btn {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 0px;
+    right: 0px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: rgba(128, 128, 128, 0.658);
+  }
+
+  #prev-btn,
+  #next-btn {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+
+  #prev-btn {
+    border-right: 40px solid grey;
+    left: -50px;
+  }
+
+  #next-btn {
+    border-left: 40px solid grey;
+    right: -50px;
+  }
+
+  #next-btn:hover,
+  #prev-btn:hover {
+    opacity: 0.6;
+  }
+
+  /****** media queries *******/
+
+  @media (max-width: 992px) {
+    .image-box {
+      height: 55vh;
+      width: 55vw;
+    }
+  }
+
+  @media (max-width: 678px) {
+    .image-box {
+      height: 40vh;
+      width: 65vw;
+    }
+    #close-btn {
+      padding: 3px;
+      width: 30px;
+      height: 30px;
+      font-size: 1.2rem;
+      background-color: rgba(128, 128, 128, 0.658);
+    }
+  }
+
+  @media (max-width: 400px) {
+    #close-btn {
+      padding: 3px;
+      width: 30px;
+      height: 30px;
+      font-size: 1.2rem;
+    }
+    #prev-btn {
+      border-right: 20px solid rgba(128, 128, 128, 0.658);
+      left: -6px;
+    }
+
+    #next-btn {
+      border-left: 20px solid rgba(128, 128, 128, 0.658);
+      right: -6px;
+    }
+
+    .image-box {
+      height: 40vh;
+      width: 90vw;
+    }
   }
 </style>
+
+<script is:inline>
+  // const imageView = document.querySelector(".image-view");
+  // const nextBtn = document.getElementById("next-btn");
+  // const prevBtn = document.getElementById("prev-btn");
+  // const closeBtn = document.getElementById("close-btn");
+  // const imageBox = document.querySelector(".image-box");
+
+  // let currentImageIdx = 0;
+
+  // setTimeout(() => {
+  //   imageView.style.display = "block";
+  //   imageBox.style.display = "block";
+  //   currentImageIdx = 1;
+  //   currentImageDisplay(currentImageIdx);
+  // }, 5000);
+
+  // imageView.addEventListener("click", function () {
+  //   this.style.display = "none";
+  //   imageBox.style.display = "none";
+  // });
+  // closeBtn.addEventListener("click", function () {
+  //   imageView.style.display = "none";
+  //   imageBox.style.display = "none";
+  // });
+
+  // function currentImageDisplay(position) {
+  //   imageBox.style.background = `url(images/GajinkarAd${currentImageIdx}.jpg) center/contain no-repeat`;
+  // }
+
+  // prevBtn.addEventListener("click", function () {
+  //   currentImageIdx--;
+  //   if (currentImageIdx === 0) {
+  //     currentImageIdx = 1;
+  //   }
+  //   currentImageDisplay(currentImageIdx);
+  // });
+
+  // nextBtn.addEventListener("click", function () {
+  //   currentImageIdx++;
+  //   if (currentImageIdx === 3) {
+  //     currentImageIdx = 1;
+  //   }
+  //   currentImageDisplay(currentImageIdx);
+  // });
+</script>

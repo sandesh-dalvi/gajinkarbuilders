@@ -1,18 +1,21 @@
 ---
 import { Image } from "astro:assets";
 
-import logo from "../assets/images/logo.png";
+import logo from "../assets/icons/logo.png";
 ---
 
 <footer class="primary-footer">
   <div class="p-4 py-6 flex justify-center">
     <div class="max-w-[1400px]">
-      <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-8 lg:gap-20 xl:gap-32 2xl:gap-36"
+      >
         <div class="flex flex-col gap-2 justify-center items-center">
           <Image src={logo} class="max-w-[200px]" alt="" />
           <p class="max-w-sm text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-            exercitationem!
+            At Gajinkar Builders, we are committed to creating exceptional
+            living spaces that embody quality, innovation, and a legacy of
+            excellence.
           </p>
           <ul class="flex gap-2 justify-center items-center">
             <li>
@@ -52,64 +55,61 @@ import logo from "../assets/images/logo.png";
             </li>
           </ul>
         </div>
-        <div class="flex flex-col gap-2 items-center">
-          <h3 class="font-bold text-lg">Important Link</h3>
-          <ul class="text-primary text-base flex flex-col gap-2 font-medium">
-            <li>
-              <a href="/contact" class="flex gap-2 items-center"
-                ><i class="fa-solid fa-hand-point-right"></i>
-                <span>Contact Us</span></a
-              >
-            </li>
-            <li>
-              <a href="/completed-projects" class="flex gap-2 items-center"
-                ><i class="fa-solid fa-hand-point-right"></i>
-                <span>Completed Projects</span></a
-              >
-            </li>
-            <li>
-              <a href="/ongoing-projects" class="flex gap-2 items-center"
-                ><i class="fa-solid fa-hand-point-right"></i>
-                <span>On Going Projects</span></a
-              >
-            </li>
+        <div class="flex justify-between items-start">
+          <div class="flex flex-col gap-2 items-center">
+            <h3 class="font-bold text-lg">Important Link</h3>
+            <ul class="text-primary text-base flex flex-col gap-2 font-medium">
+              <li>
+                <a href="/contact" class="flex gap-2 items-center"
+                  ><i class="fa-solid fa-hand-point-right"></i>
+                  <span>Contact Us</span></a
+                >
+              </li>
 
-            <li>
-              <a href="/terms-and-conditions" class="flex gap-2 items-center"
-                ><i class="fa-solid fa-hand-point-right"></i>
-                <span>Terms & Conditions</span></a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col gap-2 items-center">
-          <h3 class="font-bold text-lg">Resources</h3>
-          <ul class="text-primary text-base flex flex-col gap-2 font-medium">
-            <li>
-              <a href="/services" class="flex gap-2 items-center"
-                ><i class="fa-solid fa-hand-point-right"></i>
-                <span>Services</span></a
-              >
-            </li>
-            <li>
-              <a href="/amenities" class="flex gap-2 items-center"
-                ><i class="fa-solid fa-hand-point-right"></i>
-                <span>Amenities</span></a
-              >
-            </li>
-            <li>
-              <a href="/gallery" class="flex gap-2 items-center"
-                ><i class="fa-solid fa-hand-point-right"></i>
-                <span>Gallery</span></a
-              >
-            </li>
-            <li>
-              <a href="/faqs" class="flex gap-2 items-center"
-                ><i class="fa-solid fa-hand-point-right"></i>
-                <span>FAQs</span></a
-              >
-            </li>
-          </ul>
+              <li>
+                <a href="/contact" class="flex gap-2 items-center"
+                  ><i class="fa-solid fa-hand-point-right"></i>
+                  <span>About Us</span></a
+                >
+              </li>
+              <li>
+                <a href="/completed-projects" class="flex gap-2 items-center"
+                  ><i class="fa-solid fa-hand-point-right"></i>
+                  <span>Completed Projects</span></a
+                >
+              </li>
+              <li>
+                <a href="/ongoing-projects" class="flex gap-2 items-center"
+                  ><i class="fa-solid fa-hand-point-right"></i>
+                  <span>On Going Projects</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-2 items-center">
+            <h3 class="font-bold text-lg">Resources</h3>
+            <ul class="text-primary text-base flex flex-col gap-2 font-medium">
+              <li>
+                <a href="/services" class="flex gap-2 items-center"
+                  ><i class="fa-solid fa-hand-point-right"></i>
+                  <span>Services</span></a
+                >
+              </li>
+
+              <li>
+                <a href="/gallery" class="flex gap-2 items-center"
+                  ><i class="fa-solid fa-hand-point-right"></i>
+                  <span>Gallery</span></a
+                >
+              </li>
+              <li>
+                <a href="/faqs" class="flex gap-2 items-center"
+                  ><i class="fa-solid fa-hand-point-right"></i>
+                  <span>FAQs</span></a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -122,4 +122,6 @@ import logo from "../assets/images/logo.png";
   </div>
 </footer>
 
-<style></style>
+<!-- <div class="ad-modal">
+  <Image src={GajinkarAd1} alt="" />
+</div> -->

@@ -3,75 +3,702 @@ import MainLayout from "../../layouts/main-layout.astro";
 
 import { Image } from "astro:assets";
 
-import img1 from "../../assets/images/img1.png";
-import img2 from "../../assets/images/img2.jpg";
-import img3 from "../../assets/images/img3.jpg";
-import img4 from "../../assets/images/img4.jpg";
+import img1 from "../../assets/icons/apartment_3.png";
+import img2 from "../../assets/icons/house_2504003.png";
+import parking from "../../assets/icons/parking.png";
+import lift from "../../assets/icons/elevator_4.png";
+import water from "../../assets/icons/water-tap.png";
+import gate from "../../assets/icons/gate.png";
+import garden from "../../assets/icons/garden.png";
+import cctv from "../../assets/icons/cctv.png";
+import genbackup from "../../assets/icons/electric-generator.png";
+import evcharger from "../../assets/icons/charger.png";
+import security from "../../assets/icons/guard.png";
+
+import HeaderSection from "../../components/HeaderSection.astro";
+import SwiperProjects from "../../components/SwiperProjects";
+
+import GalleryModal from "../../components/GalleryModal.astro";
+
+// Stonecast Harmony
+import harmMain1 from "../../assets/images/stoneharmony/harmmain1.jpg";
+import harmMain2 from "../../assets/images/stoneharmony/harmmain2.jpg";
+import harmMain3 from "../../assets/images/stoneharmony/harmmain3.jpg";
+import harmLift from "../../assets/images/stoneharmony/harmlift1.jpg";
+import harmCCTV from "../../assets/images/stoneharmony/harmcctv.jpg";
+import harmPark1 from "../../assets/images/stoneharmony/harmpark1.jpg";
+import harmPark2 from "../../assets/images/stoneharmony/harmpark2.jpg";
+import harmPark3 from "../../assets/images/stoneharmony/harmpark3.jpg";
+import harmRoom1 from "../../assets/images/stoneharmony/harmroom1.jpg";
+import harmRoom2 from "../../assets/images/stoneharmony/harmroom2.jpg";
+
+// Gajinkar Bridge View Apartment
+import bridgeMain1 from "../../assets/images/bridgeview/bridgemain.jpg";
+import bridgeMain2 from "../../assets/images/bridgeview/bridgemain1.jpg";
+import bridgeView1 from "../../assets/images/bridgeview/bridgeview1.jpg";
+import bridgeView3 from "../../assets/images/bridgeview/bridgeview3.jpg";
+import bridgeTerrace1 from "../../assets/images/bridgeview/bridgeterrace1.jpg";
+import bridgeTerrace2 from "../../assets/images/bridgeview/bridgeterrace2.jpg";
+import bridgeBackup1 from "../../assets/images/bridgeview/bridgebackup1.jpg";
+import bridgeBackup2 from "../../assets/images/bridgeview/bridgebackup1.jpg";
+import bridgeGarden from "../../assets/images/bridgeview/bridgegarden.jpg";
+import bridgeLift1 from "../../assets/images/bridgeview/bridgelift.jpg";
+import bridgeLift2 from "../../assets/images/bridgeview/bridgelift1.jpg";
+import bridgeStairs from "../../assets/images/bridgeview/bridgestairs1.jpg";
+import bridgeCCTV from "../../assets/images/bridgeview/bridgecctv.jpg";
+import bridgeApt from "../../assets/images/bridgeview/bridgeaptmain1.jpg";
+import bridgeBathroom from "../../assets/images/bridgeview/bridgebathroom1.jpg";
+import bridgeKitchen1 from "../../assets/images/bridgeview/bridgekitchen1.jpg";
+import bridgeKitchen2 from "../../assets/images/bridgeview/bridgekitchen3.jpg";
+import bridgeRoom2 from "../../assets/images/bridgeview/bridgeroom2.jpg";
+import bridgeRoom1 from "../../assets/images/bridgeview/bridgeroom1.jpg";
+import bridgePentMain from "../../assets/images/bridgeview/bridgepentmain1.jpg";
+import bridgePentDine from "../../assets/images/bridgeview/bridgepentdine.jpg";
+import bridgePent1 from "../../assets/images/bridgeview/bridgepent4.jpg";
+import bridgePent2 from "../../assets/images/bridgeview/bridgepent1.jpg";
+import bridgePent3 from "../../assets/images/bridgeview/bridgepent7.jpg";
+import bridgePark1 from "../../assets/images/bridgeview/bridgepark1.jpg";
+import bridgePark2 from "../../assets/images/bridgeview/bridgepark2.jpg";
+
+// Aura Sky Apartments
+import auraSkyMain1 from "../../assets/images/aurasky/auramain.jpg";
+import auraSkyMain2 from "../../assets/images/aurasky/auramain2.jpg";
+import auraSkyMain3 from "../../assets/images/aurasky/auramain3.jpg";
+import auraSkyLift1 from "../../assets/images/aurasky/auralift.jpg";
+import auraSkyLift2 from "../../assets/images/aurasky/auralift2.jpg";
+import auraSkyPark1 from "../../assets/images/aurasky/aurapark1.jpg";
+import auraSkyPark2 from "../../assets/images/aurasky/aurapark2.jpg";
+import auraSkyCCTV from "../../assets/images/aurasky/auracctv.jpg";
+import auraSkyRoom1 from "../../assets/images/aurasky/auraroom1.jpg";
+import auraSkyRoom2 from "../../assets/images/aurasky/auraroom2.jpg";
+import auraSkyRoom3 from "../../assets/images/aurasky/auraroom3.jpg";
+import auraSkyBathroom from "../../assets/images/aurasky/aurabathroom.jpg";
+import auraSkyKitchen from "../../assets/images/aurasky/aurakitchen.jpg";
+import auraSkyBalcony from "../../assets/images/aurasky/aurabalcony.jpg";
+
+// L'Amour Classic Apartment
+import lamourMain1 from "../../assets/images/lamour/lamourmain1.jpg";
+import lamourMain2 from "../../assets/images/lamour/lamourmain2.jpg";
+import lamourMain3 from "../../assets/images/lamour/lamourmain3.jpg";
+import lamourCCTV from "../../assets/images/lamour/lamourcctv.jpg";
+import lamourPark1 from "../../assets/images/lamour/lamourpark1.jpg";
+import lamourPark2 from "../../assets/images/lamour/lamourpark2.jpg";
+
+// Stonecast Residency
+import stoneMain1 from "../../assets/images/stoneresidency/stonemain.jpg";
+import stoneMain2 from "../../assets/images/stoneresidency/stonemain1.jpg";
+import stoneLift1 from "../../assets/images/stoneresidency/stonelift1.jpg";
+import stoneLift2 from "../../assets/images/stoneresidency/stonelift2.jpg";
+import stoneCCTV1 from "../../assets/images/stoneresidency/stonecctv1.jpg";
+import stoneCCTV2 from "../../assets/images/stoneresidency/stonecctv2.jpg";
+import stonePark1 from "../../assets/images/stoneresidency/stonepark1.jpg";
+import stonePark2 from "../../assets/images/stoneresidency/stonepark2.jpg";
+
+// Dattaguru Ashirwad Apartments
+import dattaMain1 from "../../assets/images/dattaguru/dattamain4.jpg";
+import dattaMain2 from "../../assets/images/dattaguru/dattamain1.jpg";
+import dattaPark1 from "../../assets/images/dattaguru/dattapark1.jpg";
+import dattaPark2 from "../../assets/images/dattaguru/dattapark2.jpg";
+
+const stonecastHarmony = [
+  { img: harmMain1.src, title: "Stonecast Harmony " },
+  { img: harmMain2.src, title: "Stonecast Harmony " },
+  { img: harmMain3.src, title: "Stonecast Harmony " },
+  { img: harmPark1.src, title: "Stonecast Harmony - Parking " },
+  { img: harmPark2.src, title: "Stonecast Harmony - Parking " },
+  { img: harmPark3.src, title: "Stonecast Harmony - Parking " },
+  { img: harmCCTV.src, title: "Stonecast Harmony - CCTV " },
+  { img: harmLift.src, title: "Stonecast Harmony - Electrical Lifts " },
+  { img: harmRoom1.src, title: "Stonecast Harmony  " },
+  { img: harmRoom2.src, title: "Stonecast Harmony - Room" },
+];
+
+const bridgeView = [
+  { img: bridgeMain1.src, title: "Gajinkar Bridge View Apartments" },
+  { img: bridgeMain2.src, title: "Gajinkar Bridge View Apartments" },
+  { img: bridgeView1.src, title: "Gajinkar Bridge View Apartments" },
+  { img: bridgeView3.src, title: "Gajinkar Bridge View Apartments" },
+  {
+    img: bridgeTerrace1.src,
+    title: "Gajinkar Bridge View Apartments - Penthouse Terrace",
+  },
+  {
+    img: bridgeTerrace2.src,
+    title: "Gajinkar Bridge View Apartments - Penthouse Terrace",
+  },
+  {
+    img: bridgeBackup1.src,
+    title: "Gajinkar Bridge View Apartments - Generator Backup",
+  },
+  {
+    img: bridgeBackup2.src,
+    title: "Gajinkar Bridge View Apartments - Generator Backup",
+  },
+  { img: bridgeGarden.src, title: "Gajinkar Bridge View Apartments - Garden" },
+  { img: bridgeLift1.src, title: "Gajinkar Bridge View Apartments - Lift" },
+  { img: bridgeLift2.src, title: "Gajinkar Bridge View Apartments - Lift" },
+  { img: bridgeStairs.src, title: "Gajinkar Bridge View Apartments - Stairs" },
+  { img: bridgeCCTV.src, title: "Gajinkar Bridge View Apartments - CCTV" },
+  { img: bridgeApt.src, title: "Gajinkar Bridge View Apartments - Rooms" },
+  {
+    img: bridgeBathroom.src,
+    title: "Gajinkar Bridge View Apartments - Bathroom",
+  },
+  {
+    img: bridgeKitchen1.src,
+    title: "Gajinkar Bridge View Apartments - Kitchen",
+  },
+  {
+    img: bridgeKitchen2.src,
+    title: "Gajinkar Bridge View Apartments - Kitchen",
+  },
+  { img: bridgeRoom1.src, title: "Gajinkar Bridge View Apartments - Room" },
+  { img: bridgeRoom2.src, title: "Gajinkar Bridge View Apartments - Room" },
+  {
+    img: bridgePentMain.src,
+    title: "Gajinkar Bridge View Apartments - Penthouse",
+  },
+  {
+    img: bridgePentDine.src,
+    title: "Gajinkar Bridge View Apartments - Penthouse Dining Room",
+  },
+  {
+    img: bridgePent1.src,
+    title: "Gajinkar Bridge View Apartments - Penthouse Hall",
+  },
+  {
+    img: bridgePent2.src,
+    title: "Gajinkar Bridge View Apartments - Penthouse Hall",
+  },
+  {
+    img: bridgePent3.src,
+    title: "Gajinkar Bridge View Apartments - Penthouse Hall",
+  },
+  { img: bridgePark1.src, title: "Gajinkar Bridge View Apartments - Parking" },
+  { img: bridgePark2.src, title: "Gajinkar Bridge View Apartments - Parking" },
+];
+const auraSky = [
+  { img: auraSkyMain1.src, title: "Aura Sky Apartments" },
+  { img: auraSkyMain2.src, title: "Aura Sky Apartments" },
+  { img: auraSkyMain3.src, title: "Aura Sky Apartments" },
+  { img: auraSkyLift1.src, title: "Aura Sky Apartments - Lifts" },
+  { img: auraSkyLift2.src, title: "Aura Sky Apartments - Lifts" },
+  { img: auraSkyPark1.src, title: "Aura Sky Apartments - Parking" },
+  { img: auraSkyPark2.src, title: "Aura Sky Apartments - Parking" },
+  { img: auraSkyCCTV.src, title: "Aura Sky Apartments - CCTV" },
+  { img: auraSkyRoom1.src, title: "Aura Sky Apartments - Rooms" },
+  { img: auraSkyRoom2.src, title: "Aura Sky Apartments - Rooms" },
+  { img: auraSkyRoom3.src, title: "Aura Sky Apartments - Rooms" },
+  { img: auraSkyBathroom.src, title: "Aura Sky Apartments - Bathroom" },
+  { img: auraSkyKitchen.src, title: "Aura Sky Apartments - Kitchen" },
+  { img: auraSkyBalcony.src, title: "Aura Sky Apartments - Balcony" },
+];
+
+const lamourClassic = [
+  { img: lamourMain1.src, title: "L'Amour Classic Apartment" },
+  { img: lamourMain2.src, title: "L'Amour Classic Apartment" },
+  { img: lamourMain3.src, title: "L'Amour Classic Apartment" },
+  { img: lamourCCTV.src, title: "L'Amour Classic Apartment - CCTV" },
+  { img: lamourPark1.src, title: "L'Amour Classic Apartment - Parking" },
+  { img: lamourPark2.src, title: "L'Amour Classic Apartment - Parking" },
+];
+const stonecstResidency = [
+  { img: stoneMain1.src, title: "Stonecast Residency" },
+  { img: stoneMain2.src, title: "Stonecast Residency" },
+  { img: stoneLift1.src, title: "Stonecast Residency - Lift" },
+  { img: stoneLift2.src, title: "Stonecast Residency - Lift" },
+
+  { img: stoneCCTV1.src, title: "Stonecast Residency - CCTV" },
+  { img: stoneCCTV2.src, title: "Stonecast Residency - CCTV" },
+  { img: stonePark1.src, title: "Stonecast Residency - Parking" },
+  { img: stonePark2.src, title: "Stonecast Residency - Parking" },
+];
+const dattaAshirwad = [
+  { img: dattaMain1.src, title: "Dattaguru Ashirwad Apartments" },
+  { img: dattaMain2.src, title: "Dattaguru Ashirwad Apartments" },
+  { img: dattaPark1.src, title: "Dattaguru Ashirwad Apartments - Parking" },
+  { img: dattaPark2.src, title: "Dattaguru Ashirwad Apartments - Parking" },
+];
 ---
 
 <MainLayout>
-  <section class="projects-heading">
-    <div class="p-4 py-10 lg:py-14 xl:py-16 2xl:py-20">
-      <div
-        class="flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-3 xl:gap-4"
-      >
-        <h1
-          class="text-center font-bold pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
-        >
-          Journey Through Our Completed Masterpieces
-        </h1>
-        <h2 class="text-center font-medium text-neutral-800 md:max-w-[600px]">
-          Explore the Excellence of Our Completed Projects
-        </h2>
-      </div>
-    </div>
-  </section>
+  <HeaderSection
+    heading="Journey Through Our Completed Masterpieces"
+    subHeading="Explore the Excellence of Our Completed Projects"
+    img1={img1}
+    img2={img2}
+    img3={security}
+  />
 
   <section class="lg:hidden">
-    <div class="p-4 py-6">
-      <div>
-        <h2 class="text-center font-bold text-2xl">Stonecast Harmony</h2>
-        <h3 class="text-lg text-center">Alto-Betim Porvorim Bardez Goa</h3>
+    <!--  -->
+    <div
+      class="bg-[linear-gradient(109.6deg,rgb(217,229,233)_91.1%,rgb(255,255,255)_11.2%,rgb(217,229,233)_91.1%)]"
+    >
+      <div class="p-4">
+        <h2
+          class="text-center font-bold text-3xl md:text-4xl text-blue-900 p-1"
+        >
+          Stonecast Harmony
+        </h2>
+        <h3 class="text-lg text-center font-medium text-blue-950">
+          Alto-Betim Porvorim Bardez Goa
+        </h3>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            2BHK Flats - 6
+          </div>
+
+          <div class="text-center font-bold text-neutral-600">
+            Penthouse - 1
+          </div>
+        </div>
       </div>
 
-      <div>
-        <div>
-          <div></div>
-          <div>6 2BHK Flats</div>
-        </div>
-
-        <div>
-          <div></div>
-          <div>1 Penthouse</div>
-        </div>
+      <div class="pb-4">
+        <SwiperProjects images={stonecastHarmony} mobile={true} client:load />
       </div>
 
+      <div class="flex justify-center items-center py-2 md:py-4">
+        <h2 class="text-center font-bold text-3xl">Amenities</h2>
+      </div>
       <div class="grid grid-cols-2 md:grid-cols-3">
-        <div>
-          <img src="" alt="" />
-          <h3>Stilt Parking</h3>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={parking} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">Stilt parking</h3>
         </div>
-        <div>
-          <img src="" alt="" />
-          <h3>Stilt Parking</h3>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={cctv} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">CCTV</h3>
         </div>
-        <div>
-          <img src="" alt="" />
-          <h3>Stilt Parking</h3>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={lift} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">
+            PAMA electrical lifts
+          </h3>
         </div>
-        <div>
-          <img src="" alt="" />
-          <h3>Stilt Parking</h3>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={evcharger} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">
+            Electric vehicle charging ports
+          </h3>
         </div>
       </div>
-      <div>
-        <img src="" alt="" />
+      <div class="py-6 md:py-8">
+        <div
+          class="w-full h-1 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-500 via-gray-400 to-gray-100"
+        >
+        </div>
       </div>
     </div>
+
+    <!--  -->
+    <div
+      class="bg-[linear-gradient(109.6deg,rgb(217,229,233)_91.1%,rgb(255,255,255)_11.2%,rgb(217,229,233)_91.1%)]"
+    >
+      <div class="p-4 pt-6">
+        <h2
+          class="text-center font-bold text-3xl md:text-4xl text-blue-900 p-1"
+        >
+          Gajinkar Bridge View Apartment
+        </h2>
+        <h3 class="text-lg text-center font-medium text-blue-950">
+          Alto-Betim Porvorim Bardez, Reis Magos Goa
+        </h3>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            2BHK Flats - 6
+          </div>
+
+          <div class="text-center font-bold text-neutral-600">
+            Penthouse - 1
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-4">
+        <SwiperProjects images={bridgeView} mobile={true} client:load />
+      </div>
+
+      <div class="flex justify-center items-center py-2 md:py-4">
+        <h2 class="text-center font-bold text-3xl">Amenities</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3">
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={parking} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">Stilt parking</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={cctv} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">CCTV</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={genbackup} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">
+            Generator Backup
+          </h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={security} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">Security guard</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={garden} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">Garden</h3>
+        </div>
+      </div>
+      <div class="py-6 md:py-8">
+        <div
+          class="w-full h-1 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-500 via-gray-400 to-gray-100"
+        >
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      class="bg-[linear-gradient(109.6deg,rgb(217,229,233)_91.1%,rgb(255,255,255)_11.2%,rgb(217,229,233)_91.1%)]"
+    >
+      <div class="p-4 pt-6">
+        <h2
+          class="text-center font-bold text-3xl md:text-4xl text-blue-900 p-1"
+        >
+          Aura Sky Apartments
+        </h2>
+        <h3 class="text-lg text-center font-medium text-blue-950">
+          Verem, Reis Magos Goa
+        </h3>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            2BHK Flats - 8
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-4">
+        <SwiperProjects images={auraSky} mobile={true} client:load />
+      </div>
+
+      <div class="flex justify-center items-center py-2 md:py-4">
+        <h2 class="text-center font-bold text-3xl">Amenities</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3">
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={parking} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">Stilt parking</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={cctv} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">CCTV</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={gate} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">Gated</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={lift} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">Lift</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={water} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">
+            24/7 Water Supply
+          </h3>
+        </div>
+      </div>
+      <div class="py-6 md:py-8">
+        <div
+          class="w-full h-1 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-500 via-gray-400 to-gray-100"
+        >
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      class="bg-[linear-gradient(109.6deg,rgb(217,229,233)_91.1%,rgb(255,255,255)_11.2%,rgb(217,229,233)_91.1%)]"
+    >
+      <div class="p-4 pt-6">
+        <h2
+          class="text-center font-bold text-3xl md:text-4xl text-blue-900 p-1"
+        >
+          L'Amour Classic Apartment
+        </h2>
+        <h3 class="text-lg text-center font-medium text-blue-950">
+          Verem - Nerul Rd., Verem, Reis Magos Goa
+        </h3>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            1BHK & 2BHK Flats per Floor
+          </div>
+          <div class="text-center font-bold text-neutral-600">Penthouse</div>
+        </div>
+        <div class="text-center font-bold text-neutral-600">
+          4 Shops on Ground Floor
+        </div>
+      </div>
+
+      <div class="pb-4">
+        <SwiperProjects images={lamourClassic} mobile={true} client:load />
+      </div>
+
+      <div class="flex justify-center items-center py-2 md:py-4">
+        <h2 class="text-center font-bold text-3xl">Amenities</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3">
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={parking} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">
+            Stilt + Open parking
+          </h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={cctv} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">CCTV</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={genbackup} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">
+            Generator Backup
+          </h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={lift} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">Lift</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={water} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">
+            24/7 Water Supply
+          </h3>
+        </div>
+      </div>
+      <div class="py-6 md:py-8">
+        <div
+          class="w-full h-1 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-500 via-gray-400 to-gray-100"
+        >
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      class="bg-[linear-gradient(109.6deg,rgb(217,229,233)_91.1%,rgb(255,255,255)_11.2%,rgb(217,229,233)_91.1%)]"
+    >
+      <div class="p-4 pt-6">
+        <h2
+          class="text-center font-bold text-3xl md:text-4xl text-blue-900 p-1"
+        >
+          Stonecast Residency
+        </h2>
+        <h3 class="text-lg text-center font-medium text-blue-950">
+          Porvorim,Sangolda, Pilerne Goa
+        </h3>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            2BHK Flats - 8
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-4">
+        <SwiperProjects images={stonecstResidency} mobile={true} client:load />
+      </div>
+
+      <div class="flex justify-center items-center py-2 md:py-4">
+        <h2 class="text-center font-bold text-3xl">Amenities</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3">
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={parking} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">Stilt Parking</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={cctv} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">CCTV</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={gate} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">Gated</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={lift} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">PAMA Lifts</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={water} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">
+            24/7 Water Supply
+          </h3>
+        </div>
+      </div>
+      <div class="py-6 md:py-8">
+        <div
+          class="w-full h-1 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-500 via-gray-400 to-gray-100"
+        >
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      class="bg-[linear-gradient(109.6deg,rgb(217,229,233)_91.1%,rgb(255,255,255)_11.2%,rgb(217,229,233)_91.1%)]"
+    >
+      <div class="p-4 pt-6">
+        <h2
+          class="text-center font-bold text-3xl md:text-4xl text-blue-900 p-1"
+        >
+          Dattaguru Ashirwad Apartments
+        </h2>
+        <h3 class="text-lg text-center font-medium text-blue-950">
+          Porvorim,Sangolda, Pilerne Goa
+        </h3>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            BHK Flats - 8
+          </div>
+          <div class="text-center font-bold text-neutral-600">
+            2 Apts. with Terrace
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-4">
+        <SwiperProjects images={dattaAshirwad} mobile={true} client:load />
+      </div>
+
+      <div class="flex justify-center items-center py-2 md:py-4">
+        <h2 class="text-center font-bold text-3xl">Amenities</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3">
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={parking} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">
+            Stilt + Open Parking
+          </h3>
+        </div>
+
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={lift} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">Lift Facility</h3>
+        </div>
+        <div
+          class="p-2 rounded-md font-bold flex flex-col justify-center items-center"
+        >
+          <div class="w-[60px] h-[60px]">
+            <Image src={water} alt="" class="w-full object-cover" />
+          </div>
+          <h3 class="text-center font-bold text-neutral-600">
+            24/7 Water Supply
+          </h3>
+        </div>
+      </div>
+    </div>
+    <!--  -->
   </section>
 
   <section class="hidden lg:block">
-    <div class="wrapp">
+    <div class="relative w-full h-auto z-[1]">
       <div class="spacer"></div>
 
       <div class="work">
@@ -79,45 +706,430 @@ import img4 from "../../assets/images/img4.jpg";
           <div class="work__text">
             <div class="work__info">
               <div class="work__left-bl">
-                <span class="work__num">01</span>
-                <h2 class="title">
-                  Aura Sky Apartments <span class="stroke">on gsap</span>
-                </h2>
-                <a href="" class="work__link">view more</a>
-              </div>
-            </div>
+                <!-- <span class="work__num">01</span> -->
+                <h2 class="title">Stonecast Harmony</h2>
+                <p>
+                  <span class="stroke">Alto-Betim Porvorim Bardez Goa</span>
+                </p>
+                <div class="mt-4 flex justify-start px-2 items-center gap-8">
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">2BHK Flats - 6</div>
+                  </div>
 
-            <div class="work__info">
-              <div class="work__left-bl">
-                <span class="work__num">02</span>
-                <h2 class="title">
-                  image animated <span class="stroke">on gsap</span>
-                </h2>
-                <a href="" class="work__link">view more</a>
-              </div>
-            </div>
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">Penthouse - 1</div>
+                  </div>
+                </div>
 
-            <div class="work__info">
-              <div class="work__left-bl">
-                <span class="work__num">03</span>
-                <h2 class="title">
-                  Stonecast Harmony <span class="stroke">on gsap</span>
-                </h2>
-                <a href="" class="work__link">view more</a>
-              </div>
-            </div>
-
-            <div class="work__info">
-              <div class="work__left-bl">
-                <span class="work__num">04</span>
-                <h2 class="title">
-                  Gajinkar Bridge View Apartment <span class="stroke"
-                    >on gsap</span
+                <div class="py-4">
+                  <h3 class="font-bold text-lg lg:text-2xl">Amenities</h3>
+                  <ul
+                    class="py-2 font-medium grid grid-cols-2 gap-4 max-w-[500px]"
                   >
-                </h2>
-                <a href="" class="work__link">view more</a>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={parking} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Stilt parking</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={cctv} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>CCTV</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={lift} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>PAMA electrical lifts</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={evcharger} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Electric vehicle charging ports</span>
+                    </li>
+                  </ul>
+                </div>
+                <GalleryModal images={stonecastHarmony} />
               </div>
             </div>
+            <!--  -->
+            <div class="work__info">
+              <div class="work__left-bl">
+                <!-- <span class="work__num">01</span> -->
+                <h2 class="title">Gajinkar Bridge View Apartment</h2>
+                <p>
+                  <span class="stroke"
+                    >Alto-Betim Porvorim Bardez, Reis Magos Goa</span
+                  >
+                </p>
+                <div class="mt-4 flex justify-start px-2 items-center gap-8">
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">2BHK Flats - 6</div>
+                  </div>
+
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">Penthouse - 1</div>
+                  </div>
+                </div>
+
+                <div class="py-4">
+                  <h3 class="font-bold text-lg lg:text-2xl">Amenities</h3>
+                  <ul
+                    class="py-2 font-medium grid grid-cols-2 gap-4 max-w-[500px]"
+                  >
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={genbackup} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Generator backup available</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={cctv} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>CCTV</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={garden} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Garden</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={parking} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Stilt parking</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={security} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Security guard</span>
+                    </li>
+                  </ul>
+                </div>
+                <GalleryModal images={bridgeView} />
+              </div>
+            </div>
+            <!--  -->
+            <div class="work__info">
+              <div class="work__left-bl">
+                <!-- <span class="work__num">01</span> -->
+                <h2 class="title">Aura Sky Apartments</h2>
+                <p>
+                  <span class="stroke">Verem, Reis Magos Goa</span>
+                </p>
+                <div class="mt-4 flex justify-start px-2 items-center gap-8">
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">2BHK Flats - 8</div>
+                  </div>
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">1BHK- Ground Floor</div>
+                  </div>
+                </div>
+
+                <div class="py-4">
+                  <h3 class="font-bold text-lg lg:text-2xl">Amenities</h3>
+                  <ul
+                    class="py-2 font-medium grid grid-cols-2 gap-4 max-w-[500px]"
+                  >
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={water} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>24/7 Water</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={cctv} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>CCTV</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={gate} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Gated</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={lift} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Lift</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={parking} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Stilt Parking</span>
+                    </li>
+                  </ul>
+                </div>
+                <GalleryModal images={auraSky} />
+              </div>
+            </div>
+            <!--  -->
+            <div class="work__info">
+              <div class="work__left-bl">
+                <!-- <span class="work__num">01</span> -->
+                <h2 class="title">L'Amour Classic Apartment</h2>
+                <p>
+                  <span class="stroke"> Verem, Reis Magos Goa</span>
+                </p>
+                <div class="mt-4 flex justify-start px-2 items-center gap-8">
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">4 Shops on Ground Floor</div>
+                  </div>
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">1 & 2 BHK Flats per Floor</div>
+                  </div>
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">Penthouse</div>
+                  </div>
+                </div>
+
+                <div class="py-4">
+                  <h3 class="font-bold text-lg lg:text-2xl">Amenities</h3>
+                  <ul
+                    class="py-2 font-medium grid grid-cols-2 gap-4 max-w-[500px]"
+                  >
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={water} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>24/7 Water Supply</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={cctv} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>CCTV</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={genbackup} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Generator Backup</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={lift} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Lift</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={parking} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Stilt + Open Parking</span>
+                    </li>
+                  </ul>
+                </div>
+                <GalleryModal images={lamourClassic} />
+              </div>
+            </div>
+            <!--  -->
+            <div class="work__info">
+              <div class="work__left-bl">
+                <!-- <span class="work__num">01</span> -->
+                <h2 class="title">Stonecast Residency</h2>
+                <p>
+                  <span class="stroke"> Porvorim,Sangolda, Pilerne Goa</span>
+                </p>
+                <div class="mt-4 flex justify-start px-2 items-center gap-8">
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">2BHK Flats - 8</div>
+                  </div>
+                </div>
+
+                <div class="py-4">
+                  <h3 class="font-bold text-lg lg:text-2xl">Amenities</h3>
+                  <ul
+                    class="py-2 font-medium grid grid-cols-2 gap-4 max-w-[500px]"
+                  >
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={water} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>24/7 Water Supply</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={cctv} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>CCTV</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={gate} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Gated</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={lift} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>PAMA Lift</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={parking} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Stilt Parking</span>
+                    </li>
+                  </ul>
+                </div>
+                <GalleryModal images={stonecstResidency} />
+              </div>
+            </div>
+            <!--  -->
+            <div class="work__info">
+              <div class="work__left-bl">
+                <!-- <span class="work__num">01</span> -->
+                <h2 class="title">Dattaguru Ashirwad Apartments</h2>
+                <p>
+                  <span class="stroke"> Porvorim,Sangolda, Pilerne Goa</span>
+                </p>
+                <div class="mt-4 flex justify-start px-2 items-center gap-8">
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">2BHK Flats - 8</div>
+                  </div>
+                  <!-- <div class="flex flex-col justify-center items-center gap-2"> -->
+                  <div>
+                    <!-- <div class="w-[60px] h-[60px]">
+                      <Image
+                        src={building}
+                        alt=""
+                        class="w-full object-cover"
+                      />
+                    </div> -->
+                    <div class="font-bold">2 Flats with Terrace</div>
+                  </div>
+                </div>
+
+                <div class="py-4">
+                  <h3 class="font-bold text-lg lg:text-2xl">Amenities</h3>
+                  <ul
+                    class="py-2 font-medium grid grid-cols-2 gap-4 max-w-[500px]"
+                  >
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={water} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>24/7 Water Supply</span>
+                    </li>
+
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={lift} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Lift Facility</span>
+                    </li>
+                    <li class="flex justify-start items-center gap-1">
+                      <span>
+                        <Image src={parking} alt="" class="w-8 h-8" />
+                      </span>
+                      <span>Stilt + Open Parking</span>
+                    </li>
+                  </ul>
+                </div>
+                <GalleryModal images={dattaAshirwad} />
+              </div>
+            </div>
+
+            <!--  -->
           </div>
         </div>
 
@@ -125,16 +1137,42 @@ import img4 from "../../assets/images/img4.jpg";
           <div class="work__right-bl">
             <div class="work__photo">
               <div class="work__photo-item" title="1">
-                <Image src={img1} alt="" />
+                <SwiperProjects
+                  images={stonecastHarmony}
+                  mobile={false}
+                  client:load
+                />
               </div>
               <div class="work__photo-item" title="2">
-                <Image src={img2} alt="" />
+                <SwiperProjects
+                  images={bridgeView}
+                  mobile={false}
+                  client:load
+                />
               </div>
               <div class="work__photo-item" title="3">
-                <Image src={img3} alt="" />
+                <SwiperProjects images={auraSky} mobile={false} client:load />
               </div>
               <div class="work__photo-item" title="4">
-                <Image src={img4} alt="" />
+                <SwiperProjects
+                  images={lamourClassic}
+                  mobile={false}
+                  client:load
+                />
+              </div>
+              <div class="work__photo-item" title="4">
+                <SwiperProjects
+                  images={stonecstResidency}
+                  mobile={false}
+                  client:load
+                />
+              </div>
+              <div class="work__photo-item" title="4">
+                <SwiperProjects
+                  images={dattaAshirwad}
+                  mobile={false}
+                  client:load
+                />
               </div>
             </div>
           </div>
@@ -146,27 +1184,16 @@ import img4 from "../../assets/images/img4.jpg";
 </MainLayout>
 
 <style>
-  .wrapp {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 0 20px;
-    z-index: 1;
-  }
-
-  .content {
-    width: 100%;
-    height: auto;
-  }
-
   .spacer {
     width: 100%;
-    height: 50vh;
+    height: 1vh;
     /* background: #ddd; */
   }
 
   .work {
     display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 
   .work__left {
@@ -193,43 +1220,21 @@ import img4 from "../../assets/images/img4.jpg";
     text-align: right;
     font-size: 18px;
     transform: skewX(-20deg);
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   .title {
-    text-align: right;
-    font-size: 70px;
+    font-size: 2rem;
     text-transform: uppercase;
-    color: red;
+    font-weight: bold;
+    color: #02008a;
   }
 
-  .title .stroke {
+  .stroke {
     display: block;
-    color: transparent;
-    -webkit-text-stroke: 1px red;
-  }
-
-  .work__link {
-    display: block;
-    width: 365px;
-    margin-top: 50px;
-    margin-left: auto;
-    padding: 18px 0;
-    font-size: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: red;
-    letter-spacing: 4px;
-    border: 2px solid white;
-    border-radius: 30px;
-    transition: 0.4s;
-  }
-
-  .work__link:hover {
-    background: white;
-    color: black;
-    letter-spacing: 6px;
+    color: #00014b;
+    font-size: 1.2rem;
+    margin-left: 10px;
   }
 
   .work__right {
@@ -260,6 +1265,7 @@ import img4 from "../../assets/images/img4.jpg";
     cursor: pointer;
     border-radius: 80px;
     overflow: hidden;
+    box-shadow: 1px 0px 2px #02000cc9;
   }
 
   .work__photo-item img {
@@ -267,6 +1273,22 @@ import img4 from "../../assets/images/img4.jpg";
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .swiper {
+    margin: 100px auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
   }
 </style>
 
@@ -303,7 +1325,7 @@ import img4 from "../../assets/images/img4.jpg";
     clipPath: () => {
       return "inset(0px 0px 100% 0px)";
     },
-    stagger: 0.5,
+    stagger: 0.6,
     ease: "none",
   });
 

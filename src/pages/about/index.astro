@@ -3,140 +3,102 @@ import { Image } from "astro:assets";
 import MapSection from "../../components/MapSection.astro";
 import MainLayout from "../../layouts/main-layout.astro";
 
-import img1 from "../../assets/images/img1.png";
+import img1 from "../../assets/images/aspiretowers/aspiremain.jpeg";
+import img2 from "../../assets/images/bridgeview/bridgemain.jpg";
 ---
 
 <MainLayout title="Gajinkar Builders">
-  <!-- <section class="relative isolate h-[55vh] about-hero flex items-center">
-    <div class="absolute inset-0 w-full h-full bg-blue-950 opacity-70 z-0">
-    </div>
-    <div class="absolute top-[40%] left-[5%] z-10">
-      <h2 class="uppercase text-teal-200 pb-3">About Us</h2>
-      <h1
-        class="font-extralight text-white text-4xl md:text-5xl md:max-w-xl md:leading-[4rem] xl:text-6xl xl:max-w-3xl xl:leading-[5rem]"
-      >
-        We Have A Goal To Achieve You To Your Destination
-      </h1>
-    </div>
-  </section> -->
-
-  <section class="about-section">
-    <div class="py-0">
+  <section
+    class="services-heading mt-[-93px] min-h-screen flex justify-center items-center"
+  >
+    <div class="p-4 mt-[93px]">
       <div
-        class="flex flex-col justify-center items-center min-[991px]:flex-row"
+        class="flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-3 xl:gap-4"
       >
-        <div
-          class="min-[991px]:min-w-[400px] px-4 min-[991px]:px-5 min-[991px]:pr-0"
+        <h1
+          class="text-center font-black pb-2 text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-1 lg:mb-2 xl:mb-4"
         >
-          <Image
-            src={img1}
-            class="object-cover w-full md:max-w-[550px] xl:max-w-[650px]"
-            alt=""
-          />
-        </div>
-        <div class="mb-10 min-[991px]:mb-5 w-full min-[991px]:w-fit">
-          <div
-            class="relative isolate self-end flex flex-col gap-2 z-[1] p-4 lg:pl-6 xl:pl-8"
+          About <span class="text-blue-800">Gajinkar Builders</span>
+        </h1>
+      </div>
+      <div class="flex flex-col gap-4 lg:flex-row lg:gap-6 xl:gap-8 2xl:gap-10">
+        <div>
+          <h2
+            class="text-blue-900 font-bold text-lg md:max-w-[600px] lg:text-xl"
           >
-            <div
-              class="absolute inset-0 z-[-1] h-[80%] top-[21.1%] bg-[radial-gradient(circle_farthest-corner_at_10%_20%,rgba(176,229,208,1)_42%,rgba(92,202,238,0.41)_93.6%)] min-[991px]:right-[-100%] shadow-inner"
-            >
-            </div>
-            <div class="">
-              <!-- <span
-                class="text-[2px] md:text-base pb-1 leading-[0] font-bold text-fuchsia-900"
-              >
-                .
-              </span> -->
-              <h2
-                class="text-3xl md:text-4xl md:text-[45px] lg:text-6xl text-indigo-900 max-w-[510px] lg:max-w-[700px] font-extrabold"
-              >
-                About
-                <b class="font-medium italic text-indigo-800"
-                  >Gajinkar Builders</b
-                >
-              </h2>
-              <h3
-                class="text-xl text-indigo-800 max-w-[510px] lg:max-w-[700px] font-bold p-2"
-              >
-                Crafting Excellence in Construction Since 1995:
-              </h3>
-              <p
-                class="max-w-[520px] px-2 text-neutral-700 text-sm font-medium mb-0 md:text-base"
-              >
-                Founded by Santosh Gajinkar, Gajinkar Builders is a symbol of
-                construction excellence with a legacy spanning 27 years. Our
-                dedicated team blends visionary leadership with an unwavering
-                commitment to quality, transforming your dreams into timeless
-                realities. Since our inception in 1995, we've been steadfast in
-                crafting spaces that surpass expectations.
-              </p>
-              <h3
-                class="text-xl text-indigo-800 max-w-[510px] lg:max-w-[700px] font-bold p-2"
-              >
-                Diverse Ventures:
-              </h3>
-              <p
-                class="max-w-[520px] px-2 text-neutral-700 text-sm font-medium mb-0 md:text-base"
-              >
-                In addition to our construction endeavors, we proudly own a
-                tennis academy in Pundaliknagar, Porvorim, contributing to
-                sports development and community engagement. This diversified
-                approach reflects our commitment to both quality construction
-                and enriching community experiences.
-              </p>
-            </div>
-            <div class="mt-6 mb-5">
-              <h3 class="text-xl text-fuchsia-900 font-bold">
-                Our Headquarters:
-                <span class="text-lg text-teal-800 font-semibold"
-                  >Betim, Bardez - Goa</span
-                >
-              </h3>
-            </div>
-          </div>
+            Crafting Excellence in Construction Since 1995:
+          </h2>
+          <p class="text-blue-950 font-semibold md:max-w-[600px]">
+            Founded by Santosh Gajinkar, Gajinkar Builders is a symbol of
+            construction excellence with a legacy spanning 27 years. Our
+            dedicated team blends visionary leadership with an unwavering
+            commitment to quality, transforming your dreams into timeless
+            realities. Since our inception in 1995, we've been steadfast in
+            crafting spaces that surpass expectations.
+          </p>
         </div>
+        <div>
+          <h2
+            class="text-blue-900 font-bold text-lg md:max-w-[600px] lg:text-xl"
+          >
+            Diverse Ventures:
+          </h2>
+          <p class="text-blue-950 font-semibold md:max-w-[600px]">
+            In addition to our construction endeavors, we proudly own a tennis
+            academy in Pundaliknagar, Porvorim, contributing to sports
+            development and community engagement. This diversified approach
+            reflects our commitment to both quality construction and enriching
+            community experiences.
+          </p>
+        </div>
+      </div>
+      <div
+        class="text-center font-bold text-blue-950 text-base lg:text-lg 2xl:text-xl p-4 lg:p-6"
+      >
+        Our Headquarters: Betim, Bardez - Goa
       </div>
     </div>
   </section>
 
   <section class="mission-vision-section">
-    <div class="p-4 py-4 flex justify-center items-center">
+    <div class="p-4 pb-4 flex justify-center items-center">
       <div
         class="grid grid-cols-1 md:grid-cols-2 justify-center items-center lg:max-w-5xl xl:max-w-6xl 2xl:max-w-[1400px]"
       >
         <div class="md:px-2">
-          <h2 class="uppercase text-sm text-indigo-900 font-medium">
+          <h2
+            class="uppercase text-sm text-blue-900 font-black md:text-base lg:text-lg xl:text-xl"
+          >
             Our Mission & Vision
           </h2>
 
           <div
-            class="flex flex-col lg:flex-row justify-center items-center py-3"
+            class="flex flex-col lg:flex-row justify-center items-center py-3 gap-2 md:gap-3 lg:gap-4 xl:gap-6"
           >
             <div>
-              <h3 class="font-medium text-2xl md:text-3xl pb-2 xl:text-4xl">
+              <h3 class="font-bold text-2xl md:text-3xl pb-2 xl:text-4xl">
                 Mission
               </h3>
-              <p class="text-neutral-500 font-normal xl:text-base">
+              <p class="text-neutral-500 font-medium xl:text-base">
                 Providing reliable and affordable housing with a commitment to
                 exceptional quality in every endeavor.
               </p>
             </div>
             <div>
               <h3
-                class="font-medium text-2xl md:text-3xl py-2 md:pt-2 xl:text-4xl"
+                class="font-bold text-2xl md:text-3xl py-2 md:pt-2 xl:text-4xl"
               >
                 Vision
               </h3>
-              <p class="text-neutral-500 font-normal xl:text-base">
+              <p class="text-neutral-500 font-medium xl:text-base">
                 To expand ambitiously into the hospitality and sports
                 industries, aiming for substantial growth and impact.
               </p>
             </div>
           </div>
         </div>
-        <div>
-          <img src="/images/aboutsection.png" alt="" />
+        <div class="rounded-3xl overflow-hidden">
+          <Image src={img2} alt="" class="object-cover max-h-[420px]" />
         </div>
       </div>
     </div>
@@ -145,12 +107,12 @@ import img1 from "../../assets/images/img1.png";
   <section class="about-goals rounded-t-3xl">
     <div class="p-4 py-6 lg:py-8">
       <h2
-        class="text-center font-black text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+        class="text-center font-black text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
       >
         Projects
       </h2>
       <h3
-        class="text-xl my-2 mt-4 md:my-4 md:mt-6 lg:my-6 lg:mt-8 text-center font-semibold text-white py-2 bg-[#00000061] shadow-inner rounded-lg md:text-2xl lg:text-3xl md:py-3 lg:py-5 2xl:py-6 xl:text-4xl"
+        class="text-xl my-2 mt-4 md:my-4 md:mt-6 lg:my-6 lg:mt-8 text-center font-semibold text-white py-2 bg-[#000000b4] shadow-inner rounded-lg md:text-2xl lg:text-3xl md:py-3 lg:py-5 2xl:py-6 xl:text-4xl"
       >
         Crafting Excellence in Construction - A Legacy Built
       </h3>
@@ -158,9 +120,9 @@ import img1 from "../../assets/images/img1.png";
         class="p-4 flex flex-col md:flex-row text-white gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10 justify-center items-center md:text-lg lg:text-xl"
       >
         <div
-          class="overflow-hidden rounded-2xl bg-[#00000071] md:max-w-[400px] border-2 border-fuchsia-500"
+          class="overflow-hidden rounded-2xl bg-[#000000b0] md:max-w-[400px] border-2 border-indigo-600 shadow-lg"
         >
-          <Image src={img1} alt="" class="h-[20vh] object-cover lg:h-[30vh]" />
+          <Image src={img2} alt="" class="h-[20vh] object-cover lg:h-[30vh]" />
           <div class="p-2 flex justify-between items-center">
             <h2>Completed Projects - 6</h2>
             <a
@@ -171,7 +133,7 @@ import img1 from "../../assets/images/img1.png";
           </div>
         </div>
         <div
-          class="overflow-hidden rounded-2xl bg-[#00000071] md:max-w-[400px] border-2 border-fuchsia-500"
+          class="overflow-hidden rounded-2xl bg-[#000000b0] md:max-w-[400px] border-2 border-indigo-600 shadow-lg"
         >
           <Image src={img1} alt="" class="h-[20vh] object-cover lg:h-[30vh]" />
           <div class="p-2 flex justify-between items-center">
@@ -240,9 +202,7 @@ import img1 from "../../assets/images/img1.png";
     </div>
   </section>
 
-  <section
-    class="bg-gradient-to-r from-gray-800 via-gray-950 to-black rounded-t-3xl"
-  >
+  <section class="bg-gradient-to-r from-gray-800 via-gray-950 to-black">
     <h2
       class="text-center text-2xl p-2 py-6 text-white capitalize md:py-8 md:text-3xl font-semibold xl:text-4xl xl:py-10"
     >
@@ -252,25 +212,13 @@ import img1 from "../../assets/images/img1.png";
 
   <MapSection />
 </MainLayout>
-
 <style>
-  .about-hero {
-    background-image: url("/images/abouthero.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .about-bg1 {
-    background-image: url("/images/projects.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
   .about-goals {
     background-image: linear-gradient(
-      111.4deg,
-      rgba(7, 7, 9, 1) 6.5%,
-      rgba(27, 24, 113, 1) 93.2%
+      109.6deg,
+      rgb(217, 229, 233) 91.1%,
+      rgb(255, 255, 255) 11.2%,
+      rgb(217, 229, 233) 91.1%
     );
   }
 </style>

@@ -1,0 +1,207 @@
+---
+import MainLayout from "../../../layouts/main-layout.astro";
+
+import { Image } from "astro:assets";
+
+import img1 from "../../../assets/icons/excavator.png";
+import img2 from "../../../assets/icons/hook.png";
+import img3 from "../../../assets/icons/drill.png";
+import water from "../../../assets/icons/water-tap.png";
+import gate from "../../../assets/icons/gate.png";
+import cctv from "../../../assets/icons/cctv.png";
+import security from "../../../assets/icons/guard.png";
+import pool from "../../../assets/icons/swimming-pool.png";
+
+import HeaderSection from "../../../components/HeaderSection.astro";
+import SwiperProjects from "../../../components/SwiperProjects";
+
+import GalleryModal from "../../../components/GalleryModal.astro";
+
+// Aspire Towers
+import aspireMain1 from "../../../assets/images/aspiretowers/aspiremain.jpeg";
+import aspireMain2 from "../../../assets/images/aspiretowers/aspire2.jpg";
+
+// GAJ-MAK Mandovi Valley View
+import gajmakMain1 from "../../../assets/images/gajmak/gajmak1.jpg";
+import gajmakMain2 from "../../../assets/images/gajmak/gajmak4.jpg";
+import gajmakMain3 from "../../../assets/images/gajmak/gajmak2.jpg";
+
+const aspireTowers = [
+  { img: aspireMain1.src, title: "Aspire Towers " },
+  { img: aspireMain2.src, title: "Aspire Towers " },
+];
+
+const gajMakValley = [
+  { img: gajmakMain1.src, title: "GAJ-MAK Mandovi Valley View" },
+  { img: gajmakMain2.src, title: "GAJ-MAK Mandovi Valley View" },
+  { img: gajmakMain3.src, title: "GAJ-MAK Mandovi Valley View" },
+];
+---
+
+<MainLayout>
+  <HeaderSection
+    heading="Discover Our Properties For Sale"
+    subHeading="Navigate Through Our Properties"
+    img1={img1}
+    img2={img2}
+    img3={img3}
+  />
+
+  <section class="lg:hidden">
+    <div
+      class="bg-[linear-gradient(109.6deg,rgb(217,229,233)_91.1%,rgb(255,255,255)_11.2%,rgb(217,229,233)_91.1%)]"
+    >
+      <div class="p-4">
+        <h2
+          class="text-center font-bold text-3xl md:text-4xl text-blue-900 p-1"
+        >
+          1 BHK flat in Gera
+        </h2>
+        <h3 class="text-lg text-center font-medium text-blue-950">
+          Flat 404 T 3 Gera River of Joy Kadamba plateau Old Goa bypass road
+        </h3>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            Around 55 sqm
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            For sale at 58 Lakhs negotiable
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            Right now on rent fully furnished for 25k
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            All amenities included
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-4">
+        <SwiperProjects images={gajMakValley} mobile={true} client:load />
+      </div>
+
+      <div class="py-6 md:py-8">
+        <div
+          class="w-full h-1 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-500 via-gray-400 to-gray-100"
+        >
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-[linear-gradient(109.6deg,rgb(217,229,233)_91.1%,rgb(255,255,255)_11.2%,rgb(217,229,233)_91.1%)]"
+    >
+      <div class="p-4 pt-6">
+        <h2
+          class="text-center font-bold text-3xl md:text-4xl text-blue-900 p-1"
+        >
+          Plot in Tivim For outright sale
+        </h2>
+        <h3 class="text-lg text-center font-medium text-blue-950">
+          Mapusa - Bicholim Rd, Sircaim, Bodiem, Goa 403502
+        </h3>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            Plot for outright sale at Rs 30k per sqm
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-8">
+          <div class="text-center font-bold text-neutral-600">
+            For Commercial space for rent available furniture manufacture and
+            showroom, hardware building material or tile showroom at rent 1.5 L
+            monthly
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-4">
+        <SwiperProjects images={aspireTowers} mobile={true} client:load />
+      </div>
+
+      <div class="py-6 md:py-8">
+        <div
+          class="w-full h-1 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-500 via-gray-400 to-gray-100"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hidden lg:block">
+    <div class="grid grid-cols-2 justify-center items-center">
+      <div></div>
+      <div>
+        <SwiperProjects images={gajMakValley} mobile={false} client:load />
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .swiper {
+    margin: 100px auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+</style>
+
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"
+></script>
+
+<script
+  is:inline
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+<script
+  is:inline
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+></script>
+
+<script is:inline>
+  gsap.registerPlugin(ScrollTrigger);
+
+  let workinfoitems = document.querySelectorAll(".work__photo-item");
+
+  workinfoitems.forEach((item, index) => {
+    item.style.zIndex = workinfoitems.length - index;
+  });
+
+  gsap.set(".work__photo-item", {
+    clipPath: () => {
+      return "inset(0px 0px 0px 0px)";
+    },
+  });
+
+  const animation = gsap.to(".work__photo-item:not(:last-child)", {
+    clipPath: () => {
+      return "inset(0px 0px 100% 0px)";
+    },
+    stagger: 0.6,
+    ease: "none",
+  });
+
+  ScrollTrigger.create({
+    trigger: ".work",
+    start: "top top",
+    end: "bottom bottom",
+    animation: animation,
+    scrub: 1,
+  });
+</script>
