@@ -6,39 +6,52 @@ import { Image } from "astro:assets";
 import img1 from "../../../assets/icons/excavator.png";
 import img2 from "../../../assets/icons/hook.png";
 import img3 from "../../../assets/icons/drill.png";
-import water from "../../../assets/icons/water-tap.png";
-import gate from "../../../assets/icons/gate.png";
-import cctv from "../../../assets/icons/cctv.png";
-import security from "../../../assets/icons/guard.png";
-import pool from "../../../assets/icons/swimming-pool.png";
 
 import HeaderSection from "../../../components/HeaderSection.astro";
 import SwiperProjects from "../../../components/SwiperProjects";
 
-import GalleryModal from "../../../components/GalleryModal.astro";
+// Plot in Tivim For Outright Sale
+import commercialplot1 from "../../../assets/images/properties/commercialplot1.jpeg";
+import commercialplot2 from "../../../assets/images/properties/commercialplot2.jpeg";
+import commercialplot3 from "../../../assets/images/properties/commercialplot3.jpeg";
+import commercialplot4 from "../../../assets/images/properties/commercialplot4.jpeg";
+import commercialplot5 from "../../../assets/images/properties/commercialplot5.jpeg";
 
-// Aspire Towers
-import aspireMain1 from "../../../assets/images/aspiretowers/aspiremain.jpeg";
-import aspireMain2 from "../../../assets/images/aspiretowers/aspire2.jpg";
+// 1 BHK Flat in Gera
+import geraplot10 from "../../../assets/images/properties/geraplot10.jpeg";
+import geraplot1 from "../../../assets/images/properties/geraplot1.jpeg";
+import geraplot2 from "../../../assets/images/properties/geraplot2.jpeg";
+import geraplot3 from "../../../assets/images/properties/geraplot3.jpeg";
+import geraplot4 from "../../../assets/images/properties/geraplot4.jpeg";
+import geraplot5 from "../../../assets/images/properties/geraplot5.jpeg";
+import geraplot6 from "../../../assets/images/properties/geraplot6.jpeg";
+import geraplot7 from "../../../assets/images/properties/geraplot7.jpeg";
+import geraplot8 from "../../../assets/images/properties/geraplot8.jpeg";
+import geraplot9 from "../../../assets/images/properties/geraplot9.jpeg";
 
-// GAJ-MAK Mandovi Valley View
-import gajmakMain1 from "../../../assets/images/gajmak/gajmak1.jpg";
-import gajmakMain2 from "../../../assets/images/gajmak/gajmak4.jpg";
-import gajmakMain3 from "../../../assets/images/gajmak/gajmak2.jpg";
-
-const aspireTowers = [
-  { img: aspireMain1.src, title: "Aspire Towers " },
-  { img: aspireMain2.src, title: "Aspire Towers " },
+const commercialPlot = [
+  { img: commercialplot1.src, title: "Plot in Tivim For Outright Sale " },
+  { img: commercialplot2.src, title: "Plot in Tivim For Outright Sale " },
+  { img: commercialplot3.src, title: "Plot in Tivim For Outright Sale " },
+  { img: commercialplot4.src, title: "Plot in Tivim For Outright Sale " },
+  { img: commercialplot5.src, title: "Plot in Tivim For Outright Sale " },
 ];
 
-const gajMakValley = [
-  { img: gajmakMain1.src, title: "GAJ-MAK Mandovi Valley View" },
-  { img: gajmakMain2.src, title: "GAJ-MAK Mandovi Valley View" },
-  { img: gajmakMain3.src, title: "GAJ-MAK Mandovi Valley View" },
+const geraPlot = [
+  { img: geraplot10.src, title: "1 BHK Flat in Gera" },
+  { img: geraplot1.src, title: "1 BHK Flat in Gera" },
+  { img: geraplot2.src, title: "1 BHK Flat in Gera" },
+  { img: geraplot3.src, title: "1 BHK Flat in Gera" },
+  { img: geraplot4.src, title: "1 BHK Flat in Gera" },
+  { img: geraplot5.src, title: "1 BHK Flat in Gera" },
+  { img: geraplot6.src, title: "1 BHK Flat in Gera" },
+  { img: geraplot7.src, title: "1 BHK Flat in Gera" },
+  { img: geraplot8.src, title: "1 BHK Flat in Gera" },
+  { img: geraplot9.src, title: "1 BHK Flat in Gera" },
 ];
 ---
 
-<MainLayout>
+<MainLayout title="Gajinkar Builders - Properties For Sale">
   <HeaderSection
     heading="Discover Our Properties For Sale"
     subHeading="Navigate Through Our Properties"
@@ -83,7 +96,7 @@ const gajMakValley = [
       </div>
 
       <div class="pb-4">
-        <SwiperProjects images={gajMakValley} mobile={true} client:load />
+        <SwiperProjects images={geraPlot} mobile={true} client:load />
       </div>
 
       <div class="py-6 md:py-8">
@@ -120,7 +133,7 @@ const gajMakValley = [
       </div>
 
       <div class="pb-4">
-        <SwiperProjects images={aspireTowers} mobile={true} client:load />
+        <SwiperProjects images={commercialPlot} mobile={true} client:load />
       </div>
 
       <div class="py-6 md:py-8">
@@ -132,11 +145,137 @@ const gajMakValley = [
     </div>
   </section>
 
-  <section class="hidden lg:block">
-    <div class="grid grid-cols-2 justify-center items-center">
-      <div></div>
+  <section
+    class="hidden lg:block bg-[linear-gradient(109.6deg,rgb(217,229,233)_91.1%,rgb(255,255,255)_11.2%,rgb(217,229,233)_91.1%)] py-8 xl:py-10"
+  >
+    <div
+      class="grid grid-cols-2 justify-center items-center px-14 xl:px-16 2xl:px-20 gap-2 xl:gap-4"
+    >
       <div>
-        <SwiperProjects images={gajMakValley} mobile={false} client:load />
+        <h2 class="text-3xl font-bold text-[#02008a] xl:text-4xl 2xl:text-5xl">
+          1 BHK Flat in Gera
+        </h2>
+        <div class="p-2">
+          <a
+            class="text-[#00014b] hover:text-[#02008a] font-medium xl:text-lg flex justify-start items-start p-1"
+            href="https://www.google.com/search?client=tablet-android-samsung-rvo1&sca_esv=373b249675fd824a&hl=en-IN&cs=0&sxsrf=ACQVn0960x4p9wwoc_E6Y07zIr7bnYMoAQ%3A1709827593158&q=Gera%E2%80%99s%20River%20of%20Joy&ludocid=11225616161059785683&ibp=gwp%3B0%2C7&lsig=AB86z5VKJUqcZS26zlbAbvyyIA-a&kgs=07ec005559196ae8&shndl=-1&shem=lsp&source=sh%2Fx%2Floc%2Fact%2Fm1%2F4"
+          >
+            <span></span>
+            <span
+              >Flat 404 T 3 Gera River of Joy Kadamba plateau Old Goa bypass
+              road</span
+            >
+          </a>
+          <ol class="p-1 list-disc text-base xl:text-lg">
+            <li class="text-neutral-700 font-semibold marker:text-fuchsia-950">
+              Around 55 sqm
+            </li>
+            <li class="text-neutral-700 font-semibold marker:text-fuchsia-950">
+              For sale at 58 Lakhs negotiable
+            </li>
+            <li class="text-neutral-700 font-semibold marker:text-fuchsia-950">
+              Right now on rent fully furnished for 25k
+            </li>
+            <li class="text-neutral-700 font-semibold marker:text-fuchsia-950">
+              All amenities included
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div>
+        <SwiperProjects images={geraPlot} mobile={false} client:load />
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-2 justify-center items-center mt-10 px-14 xl:px-16 2xl:px-20 gap-2 xl:gap-4"
+    >
+      <div>
+        <h2 class="text-3xl font-bold text-[#02008a] xl:text-4xl 2xl:text-5xl">
+          Plot in Tivim For outright sale
+        </h2>
+        <div class="p-2">
+          <a
+            class="text-[#00014b] hover:text-[#02008a] font-medium xl:text-base flex justify-start items-start p-1"
+            href="https://www.google.com/maps?q=15.6267374,73.865235&z=17&hl=en"
+            target="_blank"
+          >
+            <span></span>
+            <span>Mapusa - Bicholim Rd, Sircaim, Bodiem, Goa 403502</span>
+          </a>
+          <ol class="p-1 list-disc text-base xl:text-lg">
+            <li class="text-neutral-700 font-semibold marker:text-fuchsia-950">
+              Plot for outright sale at Rs 30k per sqm
+            </li>
+            <li class="text-neutral-700 font-semibold marker:text-fuchsia-950">
+              For Commercial space for rent available furniture manufacture and
+              showroom, hardware building material or tile showroom at rent 1.5
+              L monthly
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div>
+        <SwiperProjects images={commercialPlot} mobile={false} client:load />
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts-bgs">
+    <div class="p-4 py-6 lg:py-8 xl:py-10">
+      <div
+        class="flex flex-col gap-2 md:flex-row lg:gap-4 xl:gap-6 md:justify-center md:items-center"
+      >
+        <div>
+          <h2 class="font-bold text-xl md:text-3xl xl:text-4xl">
+            Interested? Contact us to learn more.
+          </h2>
+        </div>
+
+        <div class="lg:min-w-[500px] xl:min-w-[600px]">
+          <form
+            id="forms"
+            class="text-lg lg:text-xl xl:text-2xl font-semibold flex flex-col gap-2 lg:gap-4 xl:gap-6"
+          >
+            <label
+              ><span class="text-neutral-300">Name :</span>
+              <input
+                required
+                type="text"
+                name="name"
+                id="name"
+                class="bg-[#ffffff21] border rounded-xl"
+              /></label
+            >
+            <label
+              ><span class="text-neutral-300">Email :</span>
+              <input
+                required
+                type="email"
+                name="email"
+                id="email"
+                class="bg-[#ffffff21] border rounded-xl"
+              /></label
+            >
+            <label
+              ><span>Phone No. :</span>
+              <input
+                required
+                type="number"
+                name="phone"
+                id="phone"
+                class="bg-[#ffffff21] border rounded-xl"
+              /></label
+            >
+            <div>
+              <button
+                type="submit"
+                id="formbtn"
+                class="p-2 px-3 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-500 to-indigo-900 rounded-lg border-2 border-indigo-900 font-bold shadow-2xl lg:p-4 lg:px-6"
+                >Submit</button
+              >
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -160,48 +299,32 @@ const gajMakValley = [
   }
 </style>
 
-<script
-  is:inline
-  src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"
-></script>
-
-<script
-  is:inline
-  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-
-<script
-  is:inline
-  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
-></script>
-
 <script is:inline>
-  gsap.registerPlugin(ScrollTrigger);
+  const forms = document.getElementById("forms");
 
-  let workinfoitems = document.querySelectorAll(".work__photo-item");
+  function sendMail(e) {
+    e.preventDefault();
 
-  workinfoitems.forEach((item, index) => {
-    item.style.zIndex = workinfoitems.length - index;
-  });
+    var templateParams = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+    };
 
-  gsap.set(".work__photo-item", {
-    clipPath: () => {
-      return "inset(0px 0px 0px 0px)";
-    },
-  });
+    emailjs.send("service_k5matsk", "template_a4f0tpp", templateParams).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Email Sent!");
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+      },
+      function (error) {
+        console.log("FAILED...", error);
+        alert("Something Went Wrong. Please Try Again!");
+      }
+    );
+  }
 
-  const animation = gsap.to(".work__photo-item:not(:last-child)", {
-    clipPath: () => {
-      return "inset(0px 0px 100% 0px)";
-    },
-    stagger: 0.6,
-    ease: "none",
-  });
-
-  ScrollTrigger.create({
-    trigger: ".work",
-    start: "top top",
-    end: "bottom bottom",
-    animation: animation,
-    scrub: 1,
-  });
+  forms.addEventListener("submit", sendMail);
 </script>

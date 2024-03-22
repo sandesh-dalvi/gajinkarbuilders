@@ -77,7 +77,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <div className=" relative group">
+            {/* <div className=" relative group">
               <button className="flex flex-row items-center w-full p-2 px-3 text-base transition-all duration-500 font-bold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none hover:bg-blue-800 hover:text-white">
                 <span>Properties</span>
               </button>
@@ -99,7 +99,8 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
             <a
               href="/about"
               className=" transition-all duration-500 p-2 px-3 rounded-2xl hover:bg-blue-800 hover:text-white font-bold"
@@ -112,11 +113,17 @@ const Header = () => {
             >
               Contact Us
             </a>
-            <a
+            {/* <a
               href="/faqs"
               className=" transition-all duration-500 p-2 px-3 rounded-2xl hover:bg-blue-800 hover:text-white font-bold"
             >
               FAQs
+            </a> */}
+            <a
+              href="/properties/for-sale"
+              className=" transition-all duration-500 p-2 px-3 border-2 border-blue-800 rounded-2xl hover:bg-blue-800 hover:text-white font-bold"
+            >
+              Properties For Sale
             </a>
           </div>
         )}
@@ -201,7 +208,7 @@ const Header = () => {
                   )}
                 </AnimatePresence>
               </motion.div>
-              <motion.div variants={itemMotion} className="  ">
+              {/* <motion.div variants={itemMotion} className="  ">
                 <AnimatePresence>
                   <motion.div
                     key="projects"
@@ -244,15 +251,23 @@ const Header = () => {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
+              </motion.div> */}
+
               <motion.a variants={itemMotion} href="/about">
                 About Us
               </motion.a>
               <motion.a variants={itemMotion} href="/contact">
                 Contact Us
               </motion.a>
-              <motion.a variants={itemMotion} href="/faqs">
+              {/* <motion.a variants={itemMotion} href="/faqs">
                 FAQs
+              </motion.a> */}
+              <motion.a
+                variants={itemMotion}
+                href="/properties/for-sale"
+                className=" text-blue-950 hover:text-blue-50"
+              >
+                Properties For Sale
               </motion.a>
             </motion.div>
           </div>

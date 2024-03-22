@@ -31,7 +31,7 @@ const SwiperProjects = ({ images, mobile }) => {
               <img
                 src={image.img}
                 alt=""
-                className=" h-[31vw] w-[41vw] object-cover"
+                className=" h-[80vh] w-full object-cover"
               />
             </SwiperSlide>
           ))}
